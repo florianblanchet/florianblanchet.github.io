@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Materialize - Compiled and minified CSS-->
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css"
+    />
+    <!-- Font Awesome Icon - CSS-->
+    <link
+      rel="stylesheet"
+      href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+    />
+    <title>Florian Blanchet | Data Engineer Freelance</title>
+    <!-- Open Graph-->
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Florian Blanchet | Data Engineer Freelance"
+    />
+    <meta
+      property="og:description"
+      content="Imaginons des projets de data science et IA qui font la différence"
+    />
+    <meta property="og:url" content="florianblanchet.github.io" />
+    <meta
+      property="og:site_name"
+      content="Florian Blanchet | Data Engineer Freelance"
+    />
+    <meta property="article:publisher" content="florianblanchet.github.io" />
+    <meta property="og:image" content="" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@blanchet_flo" />
+    <meta
+      name="twitter:title"
+      content="Florian Blanchet | Data Engineer Freelance"
+    />
+    <meta
+      name="twitter:description"
+      content="Imaginons des projets de data science et IA qui font la différence"
+    />
+    <meta name="twitter:url" content="florianblanchet.github.io" />
+    <meta name="author" content="Florian Blanchet" />
+    <meta
+      name="description"
+      content="Imaginons des projets de data science et IA qui font la différence"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="/assets/img/favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="/assets/img/favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="/assets/img/favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="/assets/img/favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="/assets/img/favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/assets/img/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/assets/img/favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/assets/img/favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/img/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/assets/img/favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="/assets/img/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/img/favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="/assets/img/favicon/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <!--if lt IE 9script(src='//html5shim.googlecode.com/svn/trunk/html5.js')
+    -->
+    <meta name="robots" content="index, follow" />
+    <!-- Custom Styles-->
+    <style>
+      /* Blog Styles */
+      body {
+        color: #333;
+        font-size: 16px;
+      }
+      a {
+        color: #009688;
+      }
+      blockquote {
+        border-left: 5px solid #795548;
+        color: #795548;
+        font-size: 125%;
+        font-weight: 400;
+        margin: 20px 0;
+        padding-left: 1.5rem;
+      }
+      blockquote * {
+        font-size: inherit;
+        line-height: inherit;
+      }
+      .text-center {
+        text-align: center;
+      }
+      nav {
+        background: white;
+        box-shadow: none;
+        height: 0;
+      }
+      nav i {
+        padding: 0 15px;
+        position: relative;
+        top: 5px;
+      }
+      main {
+        background: url(/assets/img/bg.png) repeat;
+      }
+      article {
+        max-width: 85ch;
+        margin: 0 auto;
+        padding: 2rem;
+        font-size: 100%;
+        line-height: 1.6;
+      }
+      @media (min-width: 30rem) {
+        article {
+          font-size: 120%;
+        }
+      }
+      h1 {
+        font-size: 3rem;
+        font-weight: 300;
+        letter-spacing: 0.2rem;
+        line-height: 1;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+      }
+      @media (min-width: 30rem) {
+        h1 {
+          font-size: 5rem;
+        }
+      }
+      h2 {
+        font-size: 3rem;
+        line-height: 1.3;
+      }
+      h3 {
+        font-size: 2rem;
+        line-height: 1.3;
+      }
+      hr {
+        margin: 4rem 0;
+      }
+      ul {
+        padding-left: 1em;
+      }
+      ul li {
+        list-style-type: initial;
+      }
+      p a {
+        text-decoration: underline;
+      }
+      dl {
+        color: #666;
+        margin-bottom: 3rem;
+        margin-top: 0.5rem;
+      }
+      dd {
+        display: inline-block;
+        font-weight: 500;
+        margin-left: 0;
+      }
+      dt {
+        display: inline-block;
+        margin-left: 0.5rem;
+      }
+      .back-to-index {
+        align-content: center;
+        display: flex;
+        font-size: 1rem;
+        letter-spacing: 0.25rem;
+        padding: 2rem 3rem;
+        text-transform: uppercase;
+      }
+      .back-to-index i {
+        margin-right: 0.5rem;
+      }
+      dl {
+        margin-top: 0.5rem;
+      }
+      dd {
+        display: inline-block;
+        font-weight: 500;
+        margin-left: 0;
+      }
+      dt {
+        display: inline-block;
+        margin-left: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <a class="back-to-index" href="../index.html#blog"
+      ><i class="mdi-hardware-keyboard-arrow-left"></i>Retour au Blog</a
+    >
+    <!-- Main Content-->
+    <main>
+      <article>
+        <h1>Hello, world.</h1>
+        <dl>
+          <dd>Publié:</span>
+          <dt>
+            <time datetime="2020-07-13T00:00:00+00:00">
+              13 Juillet 2020
+            </time>
+          </dt>
+        </dl>
+        <h2 id="tl-dr-">tl: dr;</h2>
+        <p>
+          lkenflkeanz
+        </p>
+        <hr />
+        <p>
+          fazefazef
+        </p>
+        <h2 id="blogging-goals">Blogging Goals</h2>
+        <h3 id="1-contribute-to-the-web-dev-community">
+          1. Contribute 
+        </h3>
+        <p>
+          fazef
+        </p>
+        <p>
+          af
+
+          <a
+            href="#"
+            >link1</a
+          >. zfvcdv
+          <a href="#">link2</a>,fzv
+          <a href="#"
+            >link3 </a
+          >.fv, <a href="#">vf</a>.
+          sfv, vfs!
+        </p>
+        <p>
+          zvf
+        </p>
+        <h3 id="2-enhance-and-document-my-learning">
+          2. vr
+        </h3>
+        <p>
+          svt <del>8</del> 9 years (I just had
+          to lvsdold). How mucrv
+          do you think I'vvr
+        </p>
+        <p>
+          C
+          <em>erv</em> it
+        </p>
+        <p>
+          verv
+        </p>
+        <h3 id="3-communicate-with-future-teammates-or-employers">
+          3. rv
+        </h3>
+        <p>
+          vre <em>future</em>.
+        </p>
+        <blockquote>
+          <p><strong>vr.</strong></p>
+        </blockquote>
+        <p><i>- verv</i></p>
+        <p>
+          eavaerv
+        </p>
+        <p> vr
+          <a href="#">fz</a> iat.
+        </p>
+        <p>
+          (gtrfe)
+        </p>
+        <hr />
+        <p>
+          vte
+        </p>
+        <p>
+          Stefv
+        </p>
+        <ul>
+          <li>
+            Uprev
+          </li>
+          <li>
+            Some erv
+          </li>
+          <li>My obervrzhree</li>
+        </ul>
+        <p><i>Woevzrvsts,</i></p>
+        <p>- Florian</p>
+        <p>P.S. er</p>
+        <p>
+          P.P.S. Mvrezvng!
+          😆
+        </p>
+      </article>
+    </main>
+
+    <script>
+
+        initGoogleAnalytics('163912368-2')
+        // Set Up Google Analytics
+        function initGoogleAnalytics(analyticsId) {
+            // Inject the Google Analytics Tag Manager script into the DOM
+            analyticsUrl =
+              "https://www.googletagmanager.com/gtag/js?id=UA-163912368-2"
+            var ref = document.getElementsByTagName("script")[0]
+            var script = document.createElement("script")
+            script.src = analyticsUrl
+            ref.parentNode.insertBefore(script, ref)
+
+            // Initialize Google Analytics
+            window.dataLayer = window.dataLayer || []
+            function gtag() {
+              dataLayer.push(arguments)
+            }
+            gtag("js", new Date())
+            gtag("config", "UA-163912368-2")
+          }
+      </script>
+  </body>
+</html>

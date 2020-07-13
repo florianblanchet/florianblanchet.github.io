@@ -1,0 +1,1633 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Materialize - Compiled and minified CSS-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css"
+    />
+    <!-- Font Awesome Icon - CSS
+    <link
+      rel="stylesheet"
+      href="https:://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+    />-->
+    <link rel="stylesheet" id="fontawesome-css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css?ver=5.4.2" type="text/css" media="all">
+    <!-- Custom Styles-->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+    <title>Florian Blanchet | Data Engineer Freelance</title>
+
+    
+    <!-- Open Graph-->
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Florian Blanchet | Data Engineer Freelance"
+    />
+    <meta
+      property="og:description"
+      content="Imaginons des projets de data science et IA qui font la différence"
+    />
+    <meta property="og:url" content="florianblanchet.github.io" />
+    <meta
+      property="og:site_name"
+      content="Florian Blanchet | Data Engineer Freelance"
+    />
+    <meta property="article:publisher" content="florianblanchet.github.io" />
+    <meta property="og:image" content="" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@blanchet_flo" />
+    <meta
+      name="twitter:title"
+      content="Florian Blanchet | Data Engineer Freelance"
+    />
+    <meta
+      name="twitter:description"
+      content="I want to make things that make a difference."
+    />
+    <meta name="twitter:url" content="florianblanchet.com" />
+    <meta name="author" content="Florian Blanchet" />
+    <meta
+      name="description"
+      content="Imaginons des projets de data science et IA qui font la différence"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="./assets/img/favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="./assets/img/favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="./assets/img/favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="./assets/img/favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="./assets/img/favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="./assets/img/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="./assets/img/favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="./assets/img/favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/img/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="./assets/img/favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="./assets/img/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/img/favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="./assets/img/favicon/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <!--if lt IE 9script(src='//html5shim.googlecode.com/svn/trunk/html5.js')
+    -->
+    <meta name="robots" content="index, follow" />
+    <!-- Global site tag (gtag.js) - Google Analytics <meta
+      name="google-site-verification"
+      content="UA-163912368-2" 
+    />-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163912368-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-163912368-2');
+    </script>
+  </head>
+  <body>
+    <!-- Navigation Menu-->
+    <nav class="hide-on-small-only">
+      <ul class="side-nav fixed section table-of-contents">
+        <li class="logo">
+          <a
+            id="logo-container"
+            aria-label="Aller à la section beginning of the page"
+            href="#intro"
+            class="brand-logo teal-text"
+          >
+            <h1>
+              Florian Blanchet<span class="brown-text light"
+                >Data Engineer Freelance</span
+              >
+            </h1></a
+          >
+        </li>
+        <li class="bold">
+          <a
+            aria-label="Aller à la section À propos"
+            href="#propos"
+            class="waves-effect waves-dark teal-text"
+            ><i class="mdi-social-person small"></i><span>À propos</span></a
+          >
+        </li>
+        <li class="bold">
+          <a
+            aria-label="Aller à la section Experiences"
+            href="#Experiences"
+            class="waves-effect waves-dark cyan-text"
+            ><i class="mdi-action-trending-up small"></i
+            ><span>Expériences</span></a
+          >
+        </li>
+        <li class="bold">
+          <a
+            aria-label="Aller à la section Références"
+            href="#References"
+            class="waves-effect waves-dark indigo-text"
+            ><i class="mdi-av-web small"></i><span>Références</span></a
+          >
+        </li>
+        <li class="bold">
+          <a
+            aria-label="Aller à la section Compétences"
+            href="#Competences"
+            class="waves-effect waves-dark purple-text"
+            ><i class="mdi-av-equalizer small"></i><span>Compétences</span></a
+          >
+        </li>
+        <li class="bold">
+          <a
+            aria-label="Aller à la section Récompenses"
+            href="#Recompenses"
+            class="waves-effect waves-dark red-text"
+            ><i class="mdi-action-grade small"></i><span>Récompenses</span></a
+          >
+        </li>
+        <li class="bold">
+          <a
+            aria-label="Aller à la section Formation"
+            href="#Formation"
+            class="waves-effect waves-dark orange-text"
+            ><i class="mdi-social-school small"></i><span>Formation</span></a
+          >
+        </li>
+        <li class="bold">
+          <a
+            aria-label="Aller à la section Contact"
+            href="#contact"
+            class="waves-effect waves-dark brown-text"
+            ><i class="mdi-content-mail small"></i><span>Contact</span></a
+          >
+        </li>
+        <li class="bold">
+          <a
+            aria-label="Aller à la section Blog"
+            href="#blog"
+            class="waves-effect waves-dark yellow-text text-darken-2"
+            ><i class="mdi-content-create small"></i><span>Blog</span></a
+          >
+        </li>
+        <!--
+        <li class="bold">
+          <a
+            aria-label="Ouvrir le CV de Florian dans un autre onglet"
+            href=""
+            target="_blank"
+            class="waves-effect waves-dark grey-text text-darken-3"
+            ><i class="mdi-action-description small"></i><span>CV</span></a
+          >
+        </li>-->
+      </ul>
+    </nav>
+    <nav class="hide-on-large only trigger z-depth-1">
+      <a
+        aria-label="Toggle visibility of the mobile navbar"
+        href="#"
+        data-activates="slide-out"
+        class="button-collapse"
+        ><i class="mdi-navigation-menu"></i
+      ></a>
+      <div class="name-title">
+        <a
+          id="name"
+          aria-label="Aller à la section beginning of the page"
+          href="#main"
+          class="teal-text"
+          >Florian Blanchet</a
+        ><span class="brown-text light">Data Engineer Freelance</span>
+      </div>
+    </nav>
+    <nav class="hide-on-large only">
+      <ul id="slide-out" class="side-nav">
+        <li class="bold">
+          <a
+            aria-label="Aller à la section À propos "
+            href="#propos"
+            class="waves-effect waves-dark teal-text"
+            ><i class="mdi-social-person small"></i><span>À propos</span></a
+          >
+        </li>
+        <li class="bold">
+          <a
+            aria-label="Aller à la section Expériences"
+            href="#Experiences"
+            class="waves-effect waves-dark cyan-text"
+            ><i class="mdi-action-trending-up small"></i
+            ><span>Expériences</span></a
+          >
+        </li>
+        <li class="bold">
+          <a
+            aria-label="Aller à la section Références"
+            href="#References"
+            class="waves-effect waves-dark indigo-text"
+            ><i class="mdi-av-web small"></i><span>Références</span></a
+          >
+        </li>
+        <li class="bold">
+          <a
+            aria-label="Aller à la section Compétences"
+            href="#Competences"
+            class="waves-effect waves-dark purple-text"
+            ><i class="mdi-av-equalizer small"></i><span>Compétences</span></a
+          >
+        </li>
+        <li class="bold">
+          <a
+            aria-label="Aller à la section Récompenses"
+            href="#Recompenses"
+            class="waves-effect waves-dark red-text"
+            ><i class="mdi-action-grade small"></i><span>Récompenses</span></a
+          >
+        </li>
+        <li class="bold">
+          <a
+            aria-label="Aller à la section Formation"
+            href="#Formation"
+            class="waves-effect waves-dark orange-text"
+            ><i class="mdi-social-school small"></i><span>Formation</span></a
+          >
+        </li>
+        <li class="bold">
+          <a
+            aria-label="Aller à la section Contact"
+            href="#contact"
+            class="waves-effect waves-dark brown-text"
+            ><i class="mdi-content-mail small"></i><span>Contact</span></a
+          >
+        </li>
+        <li class="bold">
+          <a
+            aria-label="Aller à la section Blog"
+            href="#blog"
+            class="waves-effect waves-dark yellow-text text-darken-2"
+            ><i class="mdi-content-create small"></i><span>Blog</span></a
+          >
+        </li>
+        <!--
+        <li class="bold">
+          <a
+            aria-label="Ouvrir le CV de Florian dans un autre onglet"
+            href=""
+            target="_blank"
+            class="waves-effect waves-dark grey-text text-darken-3"
+            ><i class="mdi-action-description small"></i><span>CV</span></a
+          >
+        </li>-->
+      </ul>
+    </nav>
+    <!-- Main Content-->
+    <main>
+
+    
+        
+      <section id="intro" class="section  scrollspy full-height">
+        <div class="overlay parallax-container" >
+          <div class="parallax">
+             <img src="./assets/img/florian-blanchet.jpg"  >
+          </div>
+        </div>
+        <div class="container">
+          <h2>
+          Imaginons des <span class="teal">projets</span><br />
+          qui font la <span class="underline">différence</span>.
+          </h2>
+        </div>
+      </section>
+  
+
+      <section id="propos" class="section scrollspy">
+        <h3 class="page-title white-text teal">À propos</h3>
+        <div class="container flow-text">
+          <blockquote>
+            <h2>
+              Développeur en traitement de données sous toutes ses formes: de la visualisation à la création de tunnels de traitement en passant par les algorithmes d'apprentissage (IA). 
+            </h2>
+            <!--Développeur en traitement de données sous toutes ses formes: de la création de tunnels de traitement ou les algorithmes d'apprentissage à la visualisation (tableaux de bord/sites web/chatbots) jusqu'à la création de serveurs et de stockage.-->
+          </blockquote>
+          <p>
+
+            Je travaille entant qu'<strong>indépendant en Data Science depuis 2018</strong> pour des cabinets de conseil, grandes entreprises,  startups et PME. Je réalise également parfois des missions en développement web. En parallèle je suis Co-Fondateur et responsable technique d'<a
+                    href="#andyamo"
+                    class="teal-text hoverline"
+                    aria-label="Accéder à la section Andyamo"
+                    >ANDYAMO</a>, une startup qui facilite le déplacement des personnes à mobilité réduite.
+            <br/><br/>
+            J'accompagne mes<a title="Accéder aux références" href="#References" class="teal-text hoverline"> clients</a> sur leurs <strong>projets informatiques</strong> grâce aux compétences acquises au fil de mes missions en <a href="#FrontEnd"
+                    class="teal-text hoverline"
+                    aria-label="Accéder aux compétences en Front End">visualisation</a>, <a href="#DataScience"
+                    class="teal-text hoverline"
+                    aria-label="Accéder aux compétences en Data Science">traitement </a>(tunnels de mise en forme et algorithmes de prédiction via Intelligence Artificielle) et <a href="#BackEnd"
+                    class="teal-text hoverline"
+                    aria-label="Accéder aux compétences en Back End">architecture de stockage</a> de données sur le Cloud. De nature efficace et à l'écoute, je suis attaché aux détails ce qui permet de mener les projets à bien.
+          </p>
+          <p>
+            Ceci me permet de rencontrer de nouvelles personnes, de secteurs variés, ainsi que de prendre part à de nouveaux <strong>challenges technologiques</strong> et qui ont un <strong>impact</strong>. Grâce à mon activité entrepreneuriale et certains de mes clients j'ai pu participer à favoriser l'<strong>accessibilité</strong> sur le terrain et numérique des personnes en situation de handicap. 
+          </p>
+          <p>
+            Mes activités m'amènent à me déplacer régulièrement entre Montpellier, Grenoble et Paris. 
+            Je suis sans cesse à la recherche de nouvelles technologies et sujets que j'essaye de partager via mon <a href="#blog"
+              class="teal-text hoverline"
+              aria-label="Accéder au Blog">Blog</a>.
+          </p>
+          <p>
+            N'hésitez pas à me<a href="#contact"
+                    class="teal-text hoverline"
+                    aria-label="Accéder à la section Contact"> contacter</a> si vous souhaiter échanger sur un projet ou tout simplement m'envoyer un message. <i class="fa fa-face fa-2x" aria-hidden="true"></i
+                  >
+          </p>
+        </div>
+      </section>
+      <section id="Experiences" class="section scrollspy">
+        <h3 class="page-title white-text teal">Expériences</h3>
+        <div class="container">
+          <div class="card">
+            <div class="card-content">
+              <div class="row">
+                <div class="col s12 m2">
+                  <img
+                      alt=""
+                      src="./assets/img/independant.png"
+                      class="responsive-img center-block"
+                  />
+                </div>
+                <div class="col s12 m10">
+                  <p>
+                    <span class="card-title teal-text"
+                      >Indépendant</span
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="role brown-text">Data Engineer Freelance</div>
+              <p>
+                <em class="grey-text"
+                  >Réalisation de prestations en informatique pour tout type d'entreprises</em
+                >
+              </p>
+              <p>Dévelopement de projets pour le compte de clients autour de la donnée et du Web :</p>
+              <ul>
+                <li>
+                  Programmation d'architectures de traitement de données et d'algorithmes de prédiction (IA) (<a
+                    href="#DataScience"
+                    class="teal-text hoverline"
+                    aria-label="Accéder aux compétences en Data Science"
+                    >compétences en Data-Science</a
+                  >)
+                </li>
+                <li>
+                  Développement d'interfaces de visualisation de données et de sites internet (vitrine ou E-Commerce ou Chatbots) (<a
+                    href="#FrontEnd"
+                    class="teal-text hoverline"
+                    aria-label="Accéder aux compétences en Front-End"
+                    >compétences en Front-end</a
+                  >)
+                </li>
+                <li>
+                  Configuration de serveurs et bases de données (Back-End) sur le Cloud (<a
+                    href="#BackEnd"
+                    class="teal-text hoverline"
+                    aria-label="Accéder aux compétences en Back-end"
+                    >compétences en Back-end</a
+                  >)
+                </li>
+              </ul><br>
+              <a
+                href="#References"
+                class="teal-text hoverline"
+                aria-label="Accéder aux références client"
+                >Voir les missions réalisées</a
+              >
+            </div>
+            <div class="card-action">
+              <span>Septembre 2018 - Aujourd'hui | Paris, Grenoble et Montpellier, France</span>
+              <span class="new badge grey" data-badge-caption="">IA</span>
+              <span class="new badge grey" data-badge-caption="">SiteWeb</span>
+              <span class="new badge grey" data-badge-caption="">Scraping</span>
+              <span class="new badge grey" data-badge-caption="">Data Science</span>
+            </div>
+          </div>
+          <div class="card" id="andyamo">
+            <div class="card-content">
+              <div class="row">
+                <div class="col s12 m2">
+                  <a href="http://andyamo.fr" target="_blank" aria-label="Accéder au site de Andyamo"
+                    ><img
+                      alt=""
+                      src="./assets/img/andyamo.png"
+                      class="responsive-img center-block"
+                  /></a>
+                </div>
+                <div class="col s12 m10">
+                  <p>
+                    <span class="card-title"
+                      ><a
+                        href="http://andyamo.fr"
+                        target="_blank"
+                        class="teal-text hoverline"
+                        aria-label="Accéder au site de Andyamo"
+                        >ANDYAMO</a
+                      ></span
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="role brown-text">
+                Co-Fondateur et Directeur Technique
+              </div>
+              <p>
+                <em class="grey-text"
+                  >Startup spécialisée dans le déplacement des personnes à mobilité réduite.</em
+                >
+              </p>
+              <ul>
+                <li>
+                  Mise en place de la stratégie avec mes associés, qui s'occupent de la partie commerciale et recueil de besoin utilisateur.
+                </li>
+                <li>
+                  Création de la société sur le plan juridique, gestion de la comptabilité et l'administratif. 
+                </li>
+              </ul>
+              <h6>Développement du système d'information et des services</h6>
+              <ul>
+                <li>
+                  Développement de l'architecture de collecte, transformation et stockage des données cartographiques avec ouverture via des APIs REST et GraphQL. Déploiement sur 2 services de Cloud. (<a
+                    href="#DataScience"
+                    class="teal-text hoverline"
+                    aria-label="Accéder aux compétences en Data Science"
+                    >Outils d'architecture</a
+                  > et de <a
+                    href="#BackEnd"
+                    class="teal-text hoverline"
+                    aria-label="Accéder aux compétences en Back-end"
+                    >Back-end</a
+                  >)
+                </li>
+                <li>
+                  Programation de 3 sites web avec React.JS et JQuery pour des clients et des outils de gestion de données interne. (<a
+                    href="#FrontEnd"
+                    class="teal-text hoverline"
+                    aria-label="Accéder aux compétences en Front-End"
+                    >Technos de Front-end</a
+                  >)
+                </li>
+              </ul>
+            </div>
+            <div class="card-action">
+              <span>Avril 2017 - Aujourd'hui | Grenoble, France</span>
+              <span class="new badge grey" data-badge-caption="">Data Engineering</span>
+              <span class="new badge grey" data-badge-caption="">API</span>
+              <span class="new badge grey" data-badge-caption="">SIG</span>
+              <span class="new badge grey" data-badge-caption="">React.JS</span>
+              <span class="new badge grey" data-badge-caption="">Entrepreunariat</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <div class="row">
+                <div class="col s12 m2">
+                  <a href="https://www2.deloitte.com/fr/fr/pages/technology/solutions/intelligence-artificielle-et-data-science.html" target="_blank" aria-label="Accéder au site de Deloitte"
+                    ><img
+                      alt=""
+                      src="./assets/img/deloitte.png"
+                      class="responsive-img center-block"
+                  /></a>
+                </div>
+                <div class="col s12 m10">
+                  <p>
+                    <span class="card-title"
+                      ><a
+                        href="https://www2.deloitte.com/fr/fr/pages/technology/solutions/intelligence-artificielle-et-data-science.html"
+                        target="_blank"
+                        class="teal-text hoverline"
+                        aria-label="Accéder au site de Deloitte"
+                        >DELOITTE Conseil</a
+                      ></span
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="role brown-text">Consultant Data & Analytics</div>
+              <p>
+                <em class="grey-text"
+                  >Service Analytics & Information Management (AIM) qui développe et met en production des projets d’Intelligence Artificielle (IA).</em
+                >
+              </p>
+              <ul>
+                <li>
+                  Développement d'algorithmes de machine learning sur du texte (<strong>Natural Language Processing</strong>) pour de la classification automatique de mails
+                </li>
+                <li>
+                  Programation d'un prototype de traitement automatique de factures avec des<strong> algorithmes d'extraction de texte d'images (OCR)</strong> et avec le texte obtenu d'algorithmes de <strong>reconnaissance d'entités nommées</strong> (Named Entity Recognition)
+                </li>
+                <li>
+                  Mission client sur de la collecte et analyse de gros volumes de données pour en faire l'analyse dans le secteur automobile. 
+                </li>
+              </ul>
+            </div>
+            <div class="card-action">
+              <span>Février 2018 - Octobre 2018 | Paris, France</span>
+              <span class="new badge grey" data-badge-caption="">Data Science</span>
+              <span class="new badge grey" data-badge-caption="">Machine Learning</span>
+              <span class="new badge grey" data-badge-caption="">Scraping</span>
+              <span class="new badge grey" data-badge-caption="">Consulting</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <div class="row">
+                <div class="col s12 m2">
+                  <a href="https://hytech-imaging.fr" target="_blank" aria-label="Accéder au site d'Hytech Imaging"
+                    ><img
+                      alt=""
+                      src="./assets/img/hytech-imaging.png"
+                      class="responsive-img center-block"
+                  /></a>
+                </div>
+                <div class="col s12 m10">
+                  <p>
+                    <span class="card-title"
+                      ><a
+                        href="https://hytech-imaging.fr"
+                        target="_blank"
+                        class="teal-text hoverline"
+                        aria-label="Accéder au site d'Hytech Imaging"
+                        >Hytech Imaging</a
+                      ></span
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="role brown-text">Stagiaire en Deep Learning</div>
+              <p>
+                <em class="grey-text"
+                  >Startup spécialisée dans la capture d'images hyper spectrrales à partir de drones</em
+                >
+              </p>
+              <p>
+              Elaboration d’une stratégie de Deep learning pour une application de reconnaissance de formes à partir d’un capteur hyperspectral miniaturisé sur smartphone.</p>
+              <ul>
+                <li>Utilisation de Python et de la bibliothèque<strong> Tensorflow</strong></li>
+                <li>Virtualisation de l'environnement de traitement de la donnée avec Docker</li>
+                <li>Rédaction d'un rapport des cas d'usage possibles des Réseaux de Neurones pour la startup</li>
+              </ul>
+            </div>
+            <div class="card-action">
+              <span>Février 2017 - Mars 2017 | Brest, France</span>
+              <span class="new badge grey" data-badge-caption="">DeepLearning</span>
+              <span class="new badge grey" data-badge-caption="">Python</span>
+              <span class="new badge grey" data-badge-caption="">Tensorflow</span>
+              <span class="new badge grey" data-badge-caption="">Réseaux de Neurones</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="References" class="section scrollspy">
+        <h3 class="page-title white-text teal">Références Freelance</h3>
+        <div class="container">
+          <div class="row">
+            <!-- Suez-->
+            <div class="col s12 m6 l4">
+              <div class="card large">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img
+                    alt=""
+                    src="./assets/img/suez.png"
+                    class="activator"
+                  />
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator teal-text hoverline"
+                    >Suez<i class="mdi-navigation-more-vert right"></i
+                  ></span>
+                  <p>
+                    Développement d'un<strong> logiciel de simulation</strong> de flux piétons dans les décheteries afin d'optimiser le positionnement des bennes et la construction.  
+                  </p>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title brown-text"
+                    >Détail<i class="mdi-navigation-close right"></i
+                  ></span>
+                  <br><br>
+                  <h6>Durée : 6 mois à mi-temps</h6>
+                  <ul>
+                    <li>Logiciel de simulation en <strong>Java</strong></li>
+                    <li>Traitement des données statistiques en <strong>Python</strong></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Anacrouse-->
+            <div class="col s12 m6 l4">
+              <div class="card large">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img
+                    alt=""
+                    src="./assets/img/anacrouse.png"
+                    class="activator"
+                  />
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator teal-text hoverline"
+                    >Anacrouse<i class="mdi-navigation-more-vert right"></i
+                  ></span>
+                  <p>
+                    Créations d'<strong>interfaces Webhook/API </strong>permettant de relier les données de prospects venant de publicités Facebook/Instagram vers une base de donnée CRM (Gestion de Relation Client).
+                  </p>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title brown-text"
+                    >Détail<i class="mdi-navigation-close right"></i
+                  ></span>
+                  <br><br>
+                  <h6>Durée : 2 semaines</h6>
+                  <ul>
+                    <li>Serveur API REST en Python avec <strong>Flask</strong></li>
+                    <li>Utilisation de formulaires <strong>JSON</strong></li>
+                    <li>Interface <strong>Facebook for Business</strong> de gestion des publicités</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- OnePoint-->
+            <div class="col s12 m6 l4">
+              <div class="card large">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img
+                    alt=""
+                    src="./assets/img/onepoint.png"
+                    class="activator"
+                  />
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator teal-text hoverline"
+                    >OnePoint<i class="mdi-navigation-more-vert right"></i
+                  ></span>
+                  <p>
+                    Conseil en Data Science en Freelance pour le cabinet Onepoint. Développement de<strong> prototypes de Machine Learning </strong>et recherches de cas d'usage de l'Intelligence Artificielle pour des clients. 
+                  </p>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title brown-text"
+                    >Détail<i class="mdi-navigation-close right"></i
+                  ></span>
+                  <h6>Durée : 8 mois à mi-temps</h6>
+                  <ul>
+                    <li>
+                      Création de documents client de benchmark, veille et recherche de cas d'usage
+                    </li>
+                    <li>
+                      Développements de<strong> prototypes</strong> en Python avec souvent une composante Web pour arriver à un produit finit.
+                    </li>
+                    <li>
+                      Prototypes avec de la<strong> donnée textuelle (NLP), image (Computer Vision) et algorithmes de recommandation</strong>.
+                    </li>
+                    <li>Développement de serveurs sur le cloud Microsoft Azure et Raspberry Pi</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Deloitte-->
+            <div class="col s12 m6 l4">
+              <div class="card large">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img
+                    alt=""
+                    src="./assets/img/deloitte_mission.png"
+                    class="activator"
+                  />
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator teal-text hoverline"
+                    >Deloitte<i
+                      class="mdi-navigation-more-vert right"
+                    ></i
+                  ></span>
+                  <p>
+                    Conseil en traitement de données & IA en Freelance pour le cabinet de conseil en management Deloitte. Mise en place d'une <strong>infrastructure de collecte et d'analyse</strong> de gros volumes de données pour analyser un sous marché automobile pour leur client. 
+                  </p>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title brown-text"
+                    >Détail<i class="mdi-navigation-close right"></i
+                  ></span>
+                  <h6>Durée : 1 mois et demie temps plein</h6>
+                  <ul>
+                    <li>Mise en place d'une<strong> architecture de collecte</strong> de donnée sur le cloud Amazon Web Service</li>
+                    <li>Création de scripts de<strong> scraping</strong> (récupération de données du web de façon automatique) en Python avec des méthodes de contournement et des proxies pour changer les IP.</li>
+                    <li>Analyse des gros volumes de données récupérés</li>
+                    <li>Rédaction d'un<strong> rapport sur la concurrence</strong> de notre client à partir des statistiques obtenues</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Entreprise d'événementiel-->
+            <div class="col s12 m6 l4">
+              <div class="card large">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img
+                    alt=""
+                    src="./assets/img/evenementiel.jpg"
+                    class="activator"
+                  />
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator teal-text hoverline"
+                    >Entreprise d'événementiel<i class="mdi-navigation-more-vert right"></i
+                  ></span>
+                  <p>
+                    Créations de <strong>robots de collecte</strong> (scraping) pour récupérer des prospects.
+                  </p>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title brown-text"
+                    >Détail<i class="mdi-navigation-close right"></i
+                  ></span>
+                  <ul>
+                    <li>
+                      Développement de robots de<strong> scraping (collecte automatique de données du Web) </strong>en Python
+                    </li>
+                    <li>Livraison d'une base de données des établissements recensés par ses concurrents pour s'en servir de base de propsection</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Startup en recrutement-->
+            <div class="col s12 m6 l4">
+              <div class="card large">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img
+                    alt="Logo startup en recrutement"
+                    src="./assets/img/terra.png"
+                    class="activator"
+                  />
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator teal-text hoverline"
+                    >Terra Group<i
+                      class="mdi-navigation-more-vert right"
+                    ></i
+                  ></span>
+                  <p>
+                    Création d'un<strong> chatbot</strong> pour automatiser le premier contact et des questions/réponses lors d'un recrutement. 
+                  </p>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title brown-text"
+                    >Détail<i class="mdi-navigation-close right"></i
+                  ></span>
+                  <ul>
+                    <li>Front-end en HTML/CSS/Javascript avec <strong>Bootstrap et BotUI.JS</strong></li>
+                    <li>Back-end en <strong>Node.JS</strong></li>
+                    <li>Base de donnée <strong>SQLite</strong></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Bakhtech-->
+            <div class="col s12 m6 l4">
+              <div class="card large">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img
+                    alt="Cute kitten"
+                    src="./assets/img/bakhtech.png"
+                    class="activator"
+                  />
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator teal-text hoverline"
+                    >Bakhtech<i class="mdi-navigation-more-vert right"></i
+                  ></span>
+                  <p>
+                    Développement d'un<strong> site en React</strong>.
+                    <strong>Formation et accompagnement </strong>sur leur stratégie d'utilisation de la donnée et de machine learning pour faciliter l'accessibilité numérique des personnes mal voyantes ou avec un handicap cognitif. 
+                  </p>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title brown-text"
+                    >Détail<i class="mdi-navigation-close right"></i
+                  ></span>
+                  <ul>
+                    <li>
+                      Développement d'un Front-End en<strong> React.JS</strong> et un Back-End en <strong>Node.JS</strong> avec API REST
+                    </li>
+                    <li>Base de donnée MongoDB</li>
+                    <li>Mise en production sur le Cloud d'Azure via Git avec une<strong> architecture Docker</strong></li>
+                    <li><strong>Formation en Data Science</strong> pour apprendre les bases du Machine Learning (Intelligence Artificielle) et de la façon de manipuler la donnée. </li>
+                  </ul>
+                  <p><span class="card-title"
+                      ><a
+                        href="http://cocomiette.com"
+                        target="_blank"
+                        class="teal-text hoverline"
+                        style="font-size: 17px;"
+                        aria-label="Accéder au site de Bakhtech"
+                        >Accéder à Bakhtech</a
+                      ></span
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Hypra-->
+            <div class="col s12 m6 l4">
+              <div class="card large">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img
+                    alt="Site accessible aux personnes malvoyantes"
+                    src="./assets/img/hypra.png"
+                    class="activator"
+                  />
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator teal-text hoverline"
+                    >Hypra<i class="mdi-navigation-more-vert right"></i
+                  ></span>
+                  <p>
+                    Développement d'un <strong> thème Wordpress en PHP</strong> (Site Web).
+                    Site développé pour être 100% accessible aux personnes malvoyantes.
+                  </p>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title brown-text"
+                    >Détail<i class="mdi-navigation-close right"></i
+                  ></span>
+                  <ul>
+                    <li>
+                      Développement d'un thème Wordpress en <strong>PHP</strong>
+                    </li>
+                    <li>Développement d'un Front-End à partir des maquettes d'un designer en HTML/CSS/Javascript avec JQuery</li>
+                    <li>Site codé de façon à être<strong> 100% accessible pour les personnes mal voyantes</strong> (compris par les lecteurs d'assistance vocale)</li>
+                    <li>Mise en production sur les serveurs d'<strong>OVH Cloud</strong></li>
+                  </ul>
+                  <p><span class="card-title"
+                      ><a
+                        href="https://hypra.fr"
+                        target="_blank"
+                        class="teal-text hoverline"
+                        style="font-size: 17px;"
+                        aria-label="Accéder au site d'Hypra"
+                        >Accéder au site</a
+                      ></span
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Pow-Wow-->
+            <div class="col s12 m6 l4">
+              <div class="card large">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img
+                    alt="Site e-Commerce"
+                    src="./assets/img/powwow.png"
+                    class="activator"
+                  />
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator teal-text hoverline"
+                    >Pow-Wow<i class="mdi-navigation-more-vert right"></i
+                  ></span>
+                  <p>
+                    Création d'un site sur le CMS Wordpress pour Pow-Wow, association proposant des activités/séjours pour les jeunes avec un handicap.                     
+                  </p>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title brown-text"
+                    >Détail<i class="mdi-navigation-close right"></i
+                  ></span>
+                  <ul>
+                    <li>
+                      Création du site sur Wordpress
+                    </li>
+                    <li>Recueil du besoin client</li>
+                    <li>Mise en forme du contenu et de la présentation de l'activité</li>
+                  </ul>
+                  <p><span class="card-title"
+                      ><a
+                        href="http://loisir-powwow.org"
+                        target="_blank"
+                        class="teal-text hoverline"
+                        style="font-size: 17px;"
+                        aria-label="Accéder au site de Pow Wow"
+                        >Accéder au site</a
+                      ></span
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Cocomiette
+            <div class="col s12 m6 l4">
+              <div class="card large">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img
+                    alt="Site e-Commerce"
+                    src="./assets/img/cocomiette.png"
+                    class="activator"
+                  />
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator teal-text hoverline"
+                    >Cocomiette<i class="mdi-navigation-more-vert right"></i
+                  ></span>
+                  <p>
+                    Développement d'un <strong> site e-Commerce</strong> sur la plateforme Shopify avec des composants sur mesure en <strong>Liquid</strong>.
+                     
+                  </p>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title brown-text"
+                    >Détail<i class="mdi-navigation-close right"></i
+                  ></span>
+                  <ul>
+                    <li>
+                      Développement de composants personnalisés en <strong>liquid</strong> (langage de programmation propre à Shopify)
+                    </li>
+                    <li>Mise en production du site</li>
+                  </ul>
+                  <p><span class="card-title"
+                      ><a
+                        href="http://cocomiette.com"
+                        target="_blank"
+                        class="teal-text hoverline"
+                        style="font-size: 17px;"
+                        aria-label="Accéder au site de Cocomiette"
+                        >Accéder au site</a
+                      ></span
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>-->
+
+            <!-- Projet personnels en parallèle
+            <div class="col s12 m6 l4">
+              <div class="card large">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img
+                    alt="Projets perso"
+                    src="./assets/img/cocomiette.png"
+                    class="activator"
+                  />
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator teal-text hoverline"
+                    >Projet personnels en parallèle<i class="mdi-navigation-more-vert right"></i
+                  ></span>
+                  <p>
+                    Développement d'un <strong> site e-Commerce</strong> sur la plateforme Shopify avec des composants sur mesure en <strong>Liquid</strong>.
+                     
+                  </p>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title brown-text"
+                    >Détail<i class="mdi-navigation-close right"></i
+                  ></span>
+                  <ul>
+                    <li>
+                      Ruby on <strong>Rails</strong> &amp;
+                      <strong>Bootstrap</strong>
+                    </li>
+                    <li>Image upload with <strong>AWS</strong></li>
+                    <li><strong>jQuery</strong> Masonry effect</li>
+                    <li>User Authentication with <strong>Devise</strong></li>
+                  </ul>
+                  <div class="card-action">
+                    <a
+                      aria-label="  "
+                      href=""
+                      target="_blank"
+                      data-position="top"
+                      data-tooltip="View Online"
+                      class="btn-floating btn-large waves-effect waves-light brown tooltipped"
+                      ><i class="fa fa-external-link"></i></a
+                    ><a
+                      aria-label="Visitez mon Github"
+                      href="http://github.com/florianblanchet"
+                      target="_blank"
+                      data-position="top"
+                      data-tooltip="View Source"
+                      class="btn-floating btn-large waves-effect waves-light brown tooltipped"
+                      ><i class="fa fa-github"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>-->
+          </div>
+        </div>
+      </section>
+      <section id="Competences" class="section scrollspy">
+        <h3 class="page-title white-text teal">Compétences</h3>
+        <div class="container">
+          <div class="card">
+            <div class="card-content">
+              <h4 id="DataScience" class="brown-text light">Traitement de données</h4>
+              <div class="row text-center">
+                <div class="col s4 m2" style="margin-right: 10px;margin-left: 20px;">
+                  <img
+                    alt=""
+                    src="./assets/img/python.png"
+                    class="responsive-img"
+                  />Analyse de données en Python avec Pandas
+                </div>
+                <div class="col s4 m2" style="margin-right: 10px;">
+                  <img
+                    alt=""
+                    src="./assets/img/tensorflow.png"
+                    class="responsive-img"
+                  />Apprentissage statistique (IA) avec Scikit-learn et Tensorflow
+                </div>
+                <div class="col s4 m2" style="margin-right: 10px;">
+                  <img
+                    alt=""
+                    src="./assets/img/scraping.png"
+                    class="responsive-img"
+                  />Collecte de données via Scraping
+                </div>
+
+                <div class="col s4 m2" style="margin-right: 30px;">
+                  <img
+                    alt="ETL Airflow"
+                    src="./assets/img/airflow.png"
+                    class="responsive-img"
+                  />Tunnels ETL (Extraire/Transformer/Stocker) avec Airflow
+                </div>
+                <div class="col s4 m2" style="margin-right: 10px;">
+                  <img
+                    alt="Création et connection d'API"
+                    src="./assets/img/api.jpeg"
+                    class="responsive-img"
+                  />Création et connexion d'API (REST et GraphQL)
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <h4 id="FrontEnd" class="brown-text light">Visualisation / Web Front-End</h4>
+              <div class="row text-center">
+                <div class="col s4 m2">
+                  <img
+                    alt=""
+                    src="./assets/img/tableau.png"
+                    class="responsive-img"
+                  />Création de tableaux de bord : Tableau, Dash et D3.js
+                </div>
+                <div class="col s4 m2">
+                  <img
+                    alt=""
+                    src="./assets/img/kepler.png"
+                    class="responsive-img"
+                  />Visualisation de données géo (SIG) : Kepler.gl / QGis
+                </div>
+                <div class="col s4 m2">
+                  <img
+                    alt=""
+                    src="./assets/img/react.png"
+                    class="responsive-img"
+                  />Framework Javascript : React.JS
+                </div>
+                <div class="col s4 m2">
+                  <img
+                    alt=""
+                    src="./assets/img/jquery.png"
+                    class="responsive-img"
+                  />Framework Javascript : jQuery
+                </div>
+                <div class="col s4 m2">
+                  <img
+                    alt=""
+                    src="./assets/img/wordpress.png"
+                    class="responsive-img"
+                  />Création de thème Wordpress (en PHP)
+                </div>
+                <div class="col s4 m2">
+                  <img
+                    alt=""
+                    src="./assets/img/shopify.jpg"
+                    class="responsive-img"
+                  />Création de composants Shopify (en Liquid)
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <h4 id="BackEnd" class="brown-text light">Back-End / Base de Données</h4>
+              <div class="row text-center">
+                <div class="col s4 m2">
+                  <img
+                    alt=""
+                    src="./assets/img/flask.png"
+                    class="responsive-img"
+                  />Serveur Flask (Python)
+                </div>
+                <div class="col s4 m2">
+                  <img
+                    alt=""
+                    src="./assets/img/node.png"
+                    class="responsive-img"
+                  />Serveur Node.JS (Javascript)
+                </div>
+                <div class="col s4 m2">
+                  <img
+                    alt=""
+                    src="./assets/img/docker.png"
+                    class="responsive-img"
+                  />Architecture Docker
+                </div>
+                <div class="col s4 m2">
+                  <img
+                    alt=""
+                    src="./assets/img/mongodb.png"
+                    class="responsive-img"
+                  />Base de Données (BDD) orientée document MongoDB
+                </div>
+                <div class="col s4 m2">
+                  <img
+                    alt=""
+                    src="./assets/img/postgre.png"
+                    class="responsive-img"
+                  /><br>BDD relationnelle PostgreSQL
+                </div>
+                <div class="col s4 m2">
+                  <img
+                    alt=""
+                    src="./assets/img/cloud.png"
+                    class="responsive-img"
+                  />Services Cloud : Azure, Amazon Web Service & Google Cloud
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="Recompenses" class="section scrollspy">
+        <h3 class="page-title white-text teal">Récompenses</h3>
+        <div class="container">
+          <div class="row">
+            <div class="col s12 m6"  >
+              <div class="card" style="height: 440px;">
+                <div class="card-content">
+                  <p>
+                    <span class="card-title"
+                      ><a
+                        href="https://www.going-freelance.com/"
+                        target="_blank"
+                        class="teal-text hoverline"
+                        aria-label="Accéder à la vidéo de going freelance"
+                        >Interview Going Freelance</a
+                      ></span
+                    >
+                  </p>
+                  <p class="brown-text">
+                    Média sur le Freelance | April 2019
+                  </p><br>
+                   <iframe width="100%" height="300"
+                    src="https://www.youtube.com/embed/mCRC6E6hozc">
+                    </iframe> 
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m6">
+              <div class="card">
+                <div class="card-content">
+                  <p>
+                    <span class="card-title"
+                      ><a
+                        href="https://www.lesechos.fr/partenaires/macif/andyamo-le-google-maps-des-personnes-a-mobilite-reduite-1149356"
+                        target="_blank"
+                        class="teal-text hoverline"
+                         aria-label="Accéder à l'article des Echos sur Andyamo"
+                        >Andyamo - Les Echos</a
+                      ></span
+                    >
+                  </p>
+                  <p class="brown-text">Presse | Novembre 2019</p>
+                  <!--
+                  <ul>
+                    <li>
+                      Quarterly award given to a team member who exemplifies
+                      WeSpire's purpose, vision, and values, goes above and
+                      beyond in their role to make a particularly positive
+                      impact on the company.
+                    </li>
+                  </ul>-->
+                  <div class="card-image waves-effect waves-block waves-light">
+                    <a
+                        href="https://www.lesechos.fr/partenaires/macif/andyamo-le-google-maps-des-personnes-a-mobilite-reduite-1149356"
+                        target="_blank"
+                        aria-label="Accéder à l'article des Echos sur Andyamo"
+                        >
+                      <img
+                        alt="Article les echos"
+                        src="./assets/img/les-echos.png"
+                        class="activator"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12 m6">
+              <div class="card">
+                <div class="card-content">
+                  <p>
+                    <span class="card-title"
+                      ><a
+                        href="http://www.leparisien.fr/high-tech/andyamo-la-start-up-qui-concoit-des-itineraires-adaptes-aux-handicapes-05-06-2019-8086683.php"
+                        target="_blank"
+                        class="teal-text hoverline"
+                        aria-label="Accéder à l'article du Parisien sur Andyamo"
+                        >Andyamo - Le Parisien</a
+                      ></span
+                    >
+                  </p>
+                  <p class="brown-text">Presse | Juin 2019</p>
+                  <div class="card-image waves-effect waves-block waves-light">
+                    <a
+                        href="http://www.leparisien.fr/high-tech/andyamo-la-start-up-qui-concoit-des-itineraires-adaptes-aux-handicapes-05-06-2019-8086683.php"
+                        target="_blank"
+                        aria-label="Accéder à l'article du Parisien sur Andyamo"
+                        >
+                      <img
+                        alt="Article du parisien"
+                        src="./assets/img/parisien.png"
+                        class="activator"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m6">
+              <div class="card">
+                <div class="card-content">
+                  <p>
+                    <span class="card-title"
+                      ><a
+                        href="https://www.bfmtv.com/societe/en-video-marco-tetraplegique-cree-des-itineraires-100percent-accessibles-1846926.html"
+                        class="teal-text hoverline"
+                        aria-label="Accéder à l'article de BFM sur Andyamo"
+                        target="_blank"
+                        >Andyamo - BFM</a
+                      ></span
+                    >
+                  </p>
+                  <p class="brown-text">
+                    Presse | Janvier 2020
+                  </p>
+                  <iframe width="100%" height="300"
+                    src="https://www.youtube.com/embed/Zr8G1LfSOTE">
+                    </iframe> 
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-content">
+                  <p>
+                    <span class="card-title"
+                      ><a
+                        href="https://www.cvtrust.com/SmartDiploma/?KZVDzPWYZ1Ffl1oHl6/Oq8GEfkGBKNooL8nk///qQH8R+4+1eUfwEipcDPHKIaD7"
+                        target="_blank"
+                        class="teal-text hoverline"
+                         aria-label="Accéder au Mooc Principe des Réseaux de données"
+                        >Principe des Réseaux de données</a
+                      ></span
+                    >
+                  </p>
+                  <p class="brown-text">
+                    Certification MOOC Institut Mines Télécom
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="Formation" class="section scrollspy">
+        <h3 class="page-title white-text teal">Formation</h3>
+        <div class="container">
+          <div class="row">
+            <div class="col s12 m6">
+              <div class="card">
+                <div class="card-content">
+                  <p>
+                    <span class="card-title"
+                      ><a href="https://www.grenoble-em.com" class="teal-text hoverline" aria-label="Accéder au site de Grenobel Ecole de Management"
+                        >Grenoble Ecole de Management</a
+                      ></span
+                    >
+                  </p>
+                  <i>(GEM)</i>
+                  <p class="brown-text">Grenoble, FR</p>
+                  <ul>Diplôme d'école de commerce :
+                    <li>Comptabilité et gouvernance d'entreprise</li>
+                    <li>Cours de négociation et vente</li>
+                    <li>Mémoire de fin d'études : "<a href="./assets/img/Mémoire-sur-lIntelligence-Articielle.pdf"
+                        target="_blank"
+                        class="teal-text hoverline"
+                        aria-label="Accéder au mémoire sur l'IA">Les impacts métiers de l'utilisation de la donnée et ses enjeux éthiques</a>".</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          
+            <div class="col s12 m6">
+              <div class="card">
+                <div class="card-content">
+                  <p>
+                    <span class="card-title"
+                      ><a href="https://www.imt-atlantique.fr/fr" class="teal-text hoverline" target="_blank" aria-label="Accéder au site de l'IMT Atlantique"
+                        >IMT Atlantique</a
+                      ></span
+                    >
+                  </p>
+                  <i>(ex Télécom Bretagne, concours Mines-Ponts)</i>
+                  <p class="brown-text">Brest, FR</p>
+                  <ul>Diplôme d'ingénieur en Data Science :
+                    <li>Machine Learning</li>
+                    <li>Business Intelligence</li>
+                    <li>Big Data</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          <div class="row">
+            <div class="col s12 m6">
+              <div class="card">
+                <div class="card-content">
+                  <p>
+                    <span class="card-title"
+                      ><a href="http://en.sjtu.edu.cn/about-sjtu/overview" class="teal-text hoverline" target="_blank" aria-label="Accéder au site de Shanghai Jiao Tong"
+                        >Shanghai Jiao Tong University</a
+                      ></span
+                    >
+                  </p>
+                  <i>(SJTU)</i>
+                  <p class="brown-text">Shanghai, CH</p>
+                  <ul>
+                    <li>Échange universitaire de 6 mois</li>
+                    <li>Data Science / Big Data</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col s12 m6">
+              <div class="card">
+                <div class="card-content">
+                  <p>
+                    <span class="card-title"
+                      ><a href="http://lyceejoffre.net/cpge/" class="teal-text hoverline" target="_blank" aria-label="Accéder au site de Prépa Joffres">Classes préparatoires</a></span
+                    >
+                  </p>
+                  <i>Math-Physique (PSI*)</i>
+                  <p class="brown-text">Lycée Joffre Montpellier, FR</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="section scrollspy"><!--full-height-->
+        <h3 class="page-title white-text teal">Contact</h3>
+        <div class="container">
+          <div class="row">
+            <div class="col s12 m6">
+              <p>
+                <a
+                  aria-label="Envoyer un Mail à Florian"
+                  href="mailto:florianblanchet@orange.fr"
+                  data-position="top"
+                  data-tooltip="Envoyer un Mail à Florian"
+                  class="btn-floating btn-large waves-effect waves-light brown tooltipped"
+                  ><i class="fa fa-reply fa-2x" aria-hidden="true"></i
+                  ><a
+                    aria-label="Envoyer un Mail à Florian"
+                    href="mailto:florianblanchet@orange.fr"
+                    class="hoverline"
+                    >florianblanchet@orange.fr</a
+                  ></a
+                >
+              </p>
+              <p>
+                <a
+                  aria-label="Voir Florian sur GitHub"
+                  href="http://github.com/florianblanchet"
+                  target="_blank"
+                  data-position="top"
+                  data-tooltip="Voir Florian sur GitHub"
+                  class="btn-floating btn-large waves-effect waves-light brown tooltipped"
+                  ><i class="fa fa-github fa-2x" aria-hidden="true"></i
+                  ><a
+                    aria-label="Florian sur Github"
+                    href="http://github.com/florianblanchet"
+                    class="hoverline"
+                    >github.com/florianblanchet</a
+                  ></a
+                >
+              </p>
+              <p>
+                <a
+                  aria-label="Voir Florian sur Twitter"
+                  href="https://twitter.com/blanchet_flo"
+                  target="_blank"
+                  data-position="top"
+                  data-tooltip="Voir Florian sur Twitter"
+                  class="btn-floating btn-large waves-effect waves-light brown tooltipped"
+                  ><i class="fa fa-twitter fa-2x" aria-hidden="true"></i
+                  ><a
+                    aria-label="Florian sur Twitter"
+                    href="https://twitter.com/blanchet_flo"
+                    class="hoverline"
+                    >@blanchet_flo</a
+                  ></a
+                >
+              </p>
+            </div>
+            <div class="col s12 m6">
+              <p>
+                <a
+                  aria-label="Voir Florian sur LinkedIn"
+                  href="http://linkedin.com/in/florianblanchet"
+                  target="_blank"
+                  data-position="top"
+                  data-tooltip="Voir Florian sur LinkedIn"
+                  class="btn-floating btn-large waves-effect waves-light brown tooltipped"
+                  ><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i
+                  ><a
+                    aria-label="Florian sur LinkedIn"
+                    href="http://linkedin.com/in/florianblanchet"
+                    class="hoverline"
+                    >linkedin.com/in/florian-blanchet</a
+                  ></a
+                >
+              </p>
+              <p>
+                <a aria-label="Voir Florian sur Stackoverflow"
+                  href="https://stackoverflow.com/users/10010216/f-blanchet"
+                  target="_blank"
+                  data-position="top"
+                  data-tooltip="Voir Florian sur Stackoverflow"
+                  class="btn-floating btn-large waves-effect waves-light brown tooltipped"
+                  ><i class="fa fa-stack-overflow fa-2x" aria-hidden="true"></i
+                  ><a
+                  target="_blank"
+                  data-position="bottom"
+                  aria-label="Voir Florian sur Stackoverflow" 
+                  data-tooltip="Voir Florian sur Stackoverflow"
+                  href="https://stackoverflow.com/users/10010216/f-blanchet">
+                    <img style="vertical-align: middle;" src="https://stackoverflow.com/users/flair/10010216.png?theme=clean" width="208" height="58" alt="" title="Profil de Florian Blanchet sur Stack Overflow, Question &amp; réponses pour les développeurs professionels et entousiastiques">
+                  </a>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="blog" class="section scrollspy full-height">
+        <h3 class="page-title white-text teal">Blog</h3>
+        <div class="container">
+          <h4 id="posts-2020">2020</h4>
+          <hr>
+          <ul aria-labelledby="posts-2020">
+            <li>
+              <a
+                title="Accéder à l'article Hello World"
+                class="hoverline"
+                href="./blog/hello-world.html"
+                >Hello world</a
+              >
+              <dl>
+                <dd>Publié:</span>
+                <dt>
+                  <time datetime="2020-07-13T00:00:00+00:00">
+                    13 Juillet 2020
+                  </time>
+                </dt>
+              </dl>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <button onclick="topFunction()" class="btn btn-outline-primary" id="retourBtn" title="Remonter haut de page"><i class="fa fa-level-up" aria-hidden="true"></i></button>
+    </main>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+
+    <!-- Materialize - Compiled and minified JavaScript-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
+    <script type="text/javascript" src="./assets/js/main.js"></script>
+    <script>
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+
+
+      // Materialize - Initializers
+      $(document).ready(function() {
+        $(".scrollspy").scrollSpy()
+        // Initialize collapse button
+        $(".button-collapse").sideNav({
+          menuWidth: 190, // Default is 240
+          edge: "left", // Choose the horizontal origin
+          closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+        })
+      })
+
+
+    $(document).ready(function(){
+      $('.parallax').parallax();
+    });
+    </script>
+
+    <!-- nothing to see here...-->
+    <!-- prettier-ignore -->
+    <small>
+           ___                                      
+          /\  \                             ___         
+          \:\  \       ___                 /\  \     
+           \:\  \     /\__\                \:\  \  
+       ___ /::\  \   /:/__/                 \:\  \  
+      /\  /:/\:\__\ /::\  \             ___  \:\__\ 
+      \:\/:/  \/__/ \/\:\  \__         /\  \ |:|  |  
+       \::/__/         \:\/\__\        \:\  \|:|  |  
+        \:\  \          \::/  /         \:\__|:|__|   
+         \:\__\         /:/  /           \::::/__/    
+          \/__/         \/__/              ~~~~    
+    </small>
+  </body>
+</html>
