@@ -10,10 +10,14 @@
       href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css"
     />
     <!-- Font Awesome Icon - CSS-->
-    <link
-      rel="stylesheet"
-      href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
-    />
+    <link 
+      rel="stylesheet" 
+      id="fontawesome-css" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css?ver=5.4.2" 
+      type="text/css" 
+      media="all"
+    >
+
     <title>Florian Blanchet | Data Engineer Freelance</title>
     <!-- Open Graph-->
     <meta property="og:locale" content="fr_FR" />
@@ -248,10 +252,26 @@
         display: inline-block;
         margin-left: 0.5rem;
       }
+      .retourBtn {
+          position: fixed;
+          bottom: 20px;
+          right: 30px;
+          z-index: 99;
+          font-size: 18px;
+          border: none;
+          outline: none;
+          background-color: rgb(166,166,166,0.5);
+          color: white;
+          cursor: pointer;
+          border-radius: 4px;
+        }
+      .retourBtn:hover {
+          background-color: #008073;
+      }
     </style>
   </head>
   <body>
-    <a class="back-to-index" href="../index.html#blog"
+    <a class="back-to-index" href="../#blog" aria-label="Retour au blog"
       ><i class="mdi-hardware-keyboard-arrow-left"></i>Retour au Blog</a
     >
     <!-- Main Content-->
@@ -313,10 +333,22 @@
         <p>A trés vite pour les premiers partages,</i></p>
         <br>
         <p><i>~ Florian</i></p>
+        <button onclick="topFunction()" class="btn btn-outline-primary retourBtn" title="Remonter haut de page"><i class="fa fa-level-up" aria-hidden="true"></i></button>
+        <a class="back-to-index" href="../#blog"  aria-label="Retour au blog"
+            ><i class="mdi-hardware-keyboard-arrow-left"></i>Retour au Blog</a
+          >
       </article>
+      
     </main>
+    
 
     <script>
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+
 
         initGoogleAnalytics('163912368-2')
         // Set Up Google Analytics

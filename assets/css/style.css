@@ -125,14 +125,13 @@ span.badge[data-badge-caption]::after {
   padding-top: 0;
   position: relative;
 }
+.intro-height {
+  height: 100vh;
+}
 .full-height {
   height: 100vh;
 }
-#intro.section {
-  /*background: url(../../assets/img/florian-blanchet.jpg) no-repeat top
-    center/cover;*/
-  position: relative;
-}
+
 .parallax{
   height: 100%;
   position:static;
