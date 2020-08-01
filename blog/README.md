@@ -2,6 +2,7 @@
 
 ## Idées de sujets à traiter
 
+- Différentes API pour visualiser de la data carto
 - API GraphQL
 - Web Sémantique (RDF)
 - Airflow
