@@ -143,6 +143,10 @@
       a {
         color: #009688;
       }
+      li {
+        margin-top: 15px;
+        margin-left: 15px;
+      }
       blockquote {
         border-left: 5px solid #795548;
         color: #795548;
@@ -279,104 +283,219 @@
     <!-- Main Content-->
     <main>
       <article>
-        <h1>GraphQL</h1>
+        <h1>GraphQL: Une API qui ne parle pas pour rien dire</h1>
         <dl>
           <dd>Publié:</span>
           <dt>
             <time datetime="2020-07-19T00:00:00+00:00">
-              19 Juillet 2020
+              24 Septembre 2020
             </time>
           </dt>
         </dl>
-        <h2 id="tl-dr-">tl: dr; (Résumé)</h2>
+        <h2 id="tl-dr-">Pour les non développeurs </h2>
         <p>
-          <a href="./lexique.html#api">API</a>
-        </p>
-        <hr />
-        <p>
-          fazefazef
-        </p>
-        <h2 id="blogging-goals">Blogging Goals</h2>
-        <h3 id="1-contribute-to-the-web-dev-community">
-          1. Contribute 
-        </h3>
-        <p>
-          fazef
-        </p>
-        <p>
-          af
+          
+          GraphQL est une façon de requêter des données via une interface web de type <a href="./lexique.html#api">API</a>. 
+          <br>
+          Cette méthode a été ouverte au public par Facebook en 2015 (de façon <a href="https://fr.wikipedia.org/wiki/Open_source" target="_blank" aria-label="En savoir plus sur Open Source">Open Source</a>) et est de plus en plus utilisée aujourd’hui notamment en dévelopement web. Elle offre la possibilité de définir de façon exacte les données échangeables, de demander exactement celles dont on a besoin et enfin de recevoir exactement ce qu’on a demandé. Cette méthode est donc plus flexible et évite de faire des transformations a posteriori.   
 
-          <a
-            href="#"
-            >link1</a
-          >. zfvcdv
-          <a href="#">link2</a>,fzv
-          <a href="#"
-            >link3 </a
-          >.fv, <a href="#">vf</a>.
-          sfv, vfs!
-        </p>
-        <p>
-          zvf
-        </p>
-        <h3 id="2-enhance-and-document-my-learning">
-          2. vr
-        </h3>
-        <p>
-          svt <del>8</del> 9 years (I just had
-          to lvsdold). How mucrv
-          do you think I'vvr
-        </p>
-        <p>
-          C
-          <em>erv</em> it
-        </p>
-        <p>
-          verv
-        </p>
-        <h3 id="3-communicate-with-future-teammates-or-employers">
-          3. rv
-        </h3>
-        <p>
-          vre <em>future</em>.
-        </p>
-        <blockquote>
-          <p><strong>vr.</strong></p>
-        </blockquote>
-        <p><i>- verv</i></p>
-        <p>
-          eavaerv
-        </p>
-        <p> vr
-          <a href="#">fz</a> iat.
-        </p>
-        <p>
-          (gtrfe)
         </p>
         <hr />
+        <h2 id="blogging-goals">Pour les développeurs</h2>
+        <h3 id="1-pourquoi-graphql">
+          1. Pourquoi un nouveau protocole d'API web ? 
+        </h3>
         <p>
-          vte
+          GraphQL est une spécification open source publiée par Facebook en 2015 qui permet de requêter des données grâce au protocole http sur une interface API. 
+        </p>
+        <br>
+        <blockquote>
+          <p><strong>“ Demande ce que tu veux et obtient exactement ça. “</strong></p>
+        </blockquote>
+        <br>
+        <p>
+          GraphQL n’utilise qu’<strong>un URL (ou endpoint)</strong> pour requêter, alors qu'avec une API REST (couramment utilisée) on se retrouve souvent avec un grand nombre d’URLs différentes qui renvoient des données très diverses autant sur le format que le contenu. <br>
+          Il permet de créer un<strong> schéma</strong> pour décrire les types et le format des données. Ceci offre la possibilité de requêter exactement la structure de données voulue et de recevoir exactement ce qu’on demande, contrairement aux API REST qui ne permet pas (ou peu) de personnaliser les requêtes et avec lesquelles on peut avoir un gros volume de données en retour qu’il faut ensuite transformer et filtrer avant de pouvoir l’utiliser. En développement web il est aujourd'hui de plus en plus courant que ce soit le code exécuté sur le navigateur (En Front-End avec du javascript par exemple) qui demande à une API les données à afficher à l’utilisateur. GraphQL apporte donc dans ce cas plus de flexibilité et moins de mise en forme à faire. Son utilisation facilite également les discussions entre les équipes de développeurs Frontend et Backend car le Front a le schéma et requête ce dont il a besoin sans demander à développer des requêtes spécifiques comme on le voit avec les API REST.<br><br>
+          
+          Avec GraphQL, on modélise notre <strong>logique Business comme un graph</strong>. Il permet de modéliser notre donnée de façon naturelle en lien avec l'utilisation qu'il va en être faite. On définit dans le schéma différents types de noeuds et on les relie entre eux.
+          <br>
+          
+          <br>
+
+          Ce type d’interface n’a pas de version, les évolutions sont plus simples et flexibles car il suffit de faire évoluer le schéma de données. De fait ça encourage les développeurs à n’implémenter que ce dont ils ont besoin. Le but du schéma et de faire retranscrire la logique métier qui sera utilisée par la personne qui demande la donnée au lieu de copier le schéma présent en base de données. Elle offre une facilité d’interopérabilité et permet plus facilement de changer de service utilisateur sans changer tout le Backend. 
+        </p>
+
+        <h3 id="2-comment-ca-marche">
+          2. Comment ça marche ?
+        </h3>
+        <p>
+          Différentes opérations sont permises: lire (via le type « Query »), écrire (avec une « Mutation ») et s’inscrire à des flux de données (opération de type « Subscription »). 
+          <ul>
+            <li>La <strong>lecture</strong> se fait sur un URL sur lequel on demande les champs dont on a besoin. On peut y ajouter également des paramètres pour filtrer</li>
+
+            <li>La<strong> modification</strong> se fait sur le même URL avec une requête http "GET" donnant les éléments à modifier. Ceci va à l’encontre des conventions http qui poussent à utiliser la méthode http "UPDATE" pour ces cas de figure. Cette requête renvoie un objet. </li>
+
+           <li>Les <strong>abonnements</strong> (ou Subscription) permettent de recevoir une notification quand la donnée a été modifiée ou qu’un évènement est survenu. Par exemple quand un nouvel utilisateur a été créé.</li>
+          </ul>
+
         </p>
         <p>
-          Stefv
+          Les données sont définies et décrites par un<strong> schéma</strong>. Ce système est typé, avec une sémantique et une validation des données requêtées et renvoyées grâce au schéma. Il définit tous les champs, types et tout ce qui peut être demandé. De plus le schéma est implémenté dans le langage GraphQL ce qui le rend indépendant du langage utilisé coté serveur GraphQL.
+          <figure>
+          <pre>
+            <code>
+              type Query {   
+                human(id: ID!): Human 
+              }  
+
+              type Human {   
+                name: String   
+                appearsIn: [Episode]   
+                starships: [Starship] 
+              }  
+
+              enum Episode {   NEWHOPE   EMPIRE   JEDI }  
+
+              type Starship {   
+                name: String 
+              }
+            </code>
+          </pre>
+          <figcaption style="text-align: center;text-decoration: underline;">Exemple de schéma de données Star Wars</figcaption>
+          </figure>
+          Les types permis pour les champs sont larges :
+          <ul>
+            <li>Int: Un nombre entier (integer) 32‐bit.</li>
+            <li>Float: Un nombre décimal à 2 décimales.</li>
+            <li>String: Une suite de caractères de format UTF‐8.</li>
+            <li>Boolean: true ou false.</li>
+            <li>ID</li>
+            <li>Scalar: un scalaire</li>
+            <li>List: une liste</li>
+          </ul>
+          Le schéma et les types permettent la<strong> validation</strong> mais sont aussi une contrainte car on est obligé de demander les champs définit en profondeur et pas de façon superficielle (exactement ce qu’on veut et on ne peut pas récupérer tous les attributs par exemple). 
         </p>
-        <ul>
-          <li>
-            Uprev
-          </li>
-          <li>
-            Some erv
-          </li>
-          <li>My obervrzhree</li>
-        </ul>
-        <p><i>Woevzrvsts,</i></p>
-        <p>- Florian</p>
-        <p>P.S. er</p>
         <p>
-          P.P.S. Mvrezvng!
-          😆
+          La Query définie précédemment représente toutes les entrées possibles dans l’API. Pour répondre les bonnes données on définit des « <strong>resolvers </strong>».<br>
+          Les resolvers sont des fonctions qui ‘résolvent’ les valeurs pour les différents champs définis dans le schéma. Leur rôle est de renvoyer la donnée requêtée lors d’une « Query », en se connectant par exemple à une base de données ou un fichier de type xls, csv, json .. etc . Ils peuvent être synchrones ou asynchrones selon s'il faut attendre une autre action asynchrone (comme par exemple une réponse d’une requête en base de données). <br>
+          Ils prennent 4 arguments : 
+          <ul>
+            <li>root : est le résultat récupéré à la sortie du parent</li>
+            <li>args : arguments donnés pour la requête. Par exemple un filtre ou une façon de trier le résultat.</li>
+            <li>context : valeur donnée à tous les resolvers. Il permet d’avoir accès à une base de données par exemple « context.db.find() » </li>
+            <li>info</li>
+          </ul>
+          <figure>
+            <pre>
+              <code>
+                Query: {   
+                  human(obj, args, context, info) {     
+                    return  context.db.loadHumanByID(args.id)
+                      .then(       
+                        userData => new Human(userData)     
+                      )   
+                  } 
+                }
+                </code>
+            </pre>
+            <figcaption style="text-align: center;text-decoration: underline;">Exemple de resolver</figcaption>
+          </figure>
         </p>
-        <a class="back-to-index" href="../#blog"  aria-label="Retour au blog"
+
+        <p>
+          Le<strong> serveur</strong> GraphQL se base sur le schéma et les resolvers pour éxécuter les Queries/Mutations/Subscriptions et par conséquent les données demandées.<br>
+          Il répond sous le même format que la Query mais en JSON. <br>
+          Par exemple la requête :
+          <figure>
+            <pre>
+              <code>
+                {
+                  human(id: 1002) {
+                    name
+                    appearsIn
+                    starships {
+                      name
+                    }
+                  }
+                }
+                </code>
+            </pre>
+          </figure>
+          répond :
+          <figure>
+            <pre>
+              <code>
+                {
+                  "data": {
+                    "human": {
+                      "name": "Han Solo",
+                      "appearsIn": [
+                        "NEWHOPE",
+                        "EMPIRE",
+                        "JEDI"
+                      ],
+                      "starships": [
+                        {
+                          "name": "Millenium Falcon"
+                        },
+                        {
+                          "name": "Imperial shuttle"
+                        }
+                      ]
+                    }
+                  }
+                }
+                </code>
+            </pre>
+          </figure>
+
+        </p>
+        <p>
+          <strong>Outil de debug</strong> «<a href="https://github.com/graphql/graphiql" target="_blank" aria-label="Accéder au code de graphiQL">GraphiQL</a> » : Cet outil permet de créer une documentation à partir du schéma et d'explorer les données de l'API. C'est équivalente à<a href="https://www.postman.com/product/rest-client/" target="_blank" aria-label="Accéder à l'outil Postman"> Postman</a> qui est couramment utilisé avec REST. Il possède également l’autocomplétion pour aider à l’utilisation. 
+          <figure style="text-align: center;">
+          <img
+            alt="Exemple d'API REST"
+            src="https://raw.githubusercontent.com/graphql/graphiql/main/packages/graphiql/resources/graphiql.jpg"
+            class="activator"
+            style="height: 400px"
+          />
+            <figcaption style="text-align: center;text-decoration: underline;">Outil <a href="https://github.com/graphql/graphiql" target="_blank" aria-label="Accéder au code de graphiQL">GraphiQL</a> permettant de tester l'API.</figcaption>
+          </figure> 
+
+          <br>
+
+          <strong>Authentification </strong>: il existe des règles et directives @AUTH sur les champs mais j’avoue que la mise en œuvre a été un peu laborieuse car elle dépend de l’avancement des librairies de chaque langage. Personnellement en Python ce n’était pas pris en compte et mal documenté donc j’ai dû m’adapter et contourner avec des tokens dans les requêtes HTTP sans utiliser la spécification GraphQL.<br><br>
+
+          Les serveurs GraphQL peuvent être développés en<strong> plusieurs langages </strong>tels que Javascript, Python, Java, Go, Ruby… Ceci est rendu possible par le développement d’un large choix de librairies et packages par la communauté. 
+
+        </p>
+        <h3 id="3-application-python">
+          3. Application : GraphQL en Python
+        </h3>
+        <p>
+          Il y a 4 principaux packages à date (Septembre 2020). Ceux ci implémentent avec plus ou moins de fidélité la spécification définie par Facebook. Il y en a qui sont plus ou moins flexibles mais la logique reste la même avec la définition d'un schéma de données et de resolvers.
+          <ul>
+
+            <li><strong>Graphene </strong> (6k ⭐ sur <a href="https://github.com/graphql-python/graphene" target="_blank" aria-label="Accéder au code de graphene">Github</a>):<br> C'est le package le plus utilisé. Il est très haut niveau et facilite les interconnexions entre les technos de serveur (comme Flask et Django) et celles de Base de données (avec SQLAlchemy). Il prend en compte Python2 (qui n'est plus maintenu) et Python3. Le schéma de données est défini en python et mélangé avec les resolvers dans des classes. Il y a eu des rumeurs comme quoi le projet n'allait plus être maintenu par ses créateurs. Let's see...</li>
+
+            <li><strong>Ariadne </strong> (1k ⭐ sur <a href="https://github.com/mirumee/ariadne" target="_blank" aria-label="Accéder au code de ariadne">Github</a>): <br>Il est plus bas niveau et a une approche schéma-first plus proche de la philosophie du protocole GraphQL. Le schéma est d'ailleurs au format définit par la spécification. Il est compatible Python3.5 et les versions suivantes. Il est beaucoup plus récent et progresse trés vite.  Il supporte les resolvers asynchrones.</li>
+
+            <li><strong>Tartiflette</strong>( 650 ⭐ sur<a href="https://github.com/tartiflette/tartiflette" target="_blank" aria-label="Accéder au code de tartiflette"> Github</a>): <br>Sa promesse est d'aller plus loin que Graphene avec une meilleure expérience utilisateur et de façon 100% open source. Il est compatible avec Python3.6 et plus récentes.</li>
+
+            <li><strong>Strawberry</strong> (639 ⭐ sur <a href="https://github.com/strawberry-graphql/strawberry" target="_blank" aria-label="Accéder au code de strawberry"> Github</a>): <br>Ce package évolue également trés rapidement mais ne bénéficie pas encore d'une large communauté. </li>
+          </ul><br>
+          <strong>Avis perso :</strong> <br>J'ai fait le choix d'utiliser Ariadne car il est plus bas niveau et me laisse bien séparer mon serveur web Flask de ma logique GraphQL. Ariadne n'était pas le package avec la plus grosse communauté sur stackoverflow ou Github, j'ai dû faire preuve d'imagination pour déboguer... Il me permet de définir un fichier schéma avec mon système typé exactement comme détaillé dans la specification de GraphQL. <br>
+          Coté Front end je n'ai eu aucun soucis en utilisant Apollo pour requêter (React, Vue…) mais ce peut être fait avec JQuery ou les outils habituels permettant de faire des requêtes sur une API web. 
+        </p>
+        <br><br>
+
+        <p style="text-align: center;">
+          Merci de votre lecture et n'hésitez pas à <a href="../#contact"
+                    aria-label="Accéder à la section Contact"> m'envoyer </a>vos commentaires si vous avez eu une expérience avec GraphQL ou si vous voulez en savoir plus !
+                    <br><br>
+                    <strong>Florian</strong>
+        </p>
+        <a class="back-to-index" href="../#blog" aria-label="Retour au blog"
             ><i class="mdi-hardware-keyboard-arrow-left"></i>Retour au Blog</a
           >
       </article>

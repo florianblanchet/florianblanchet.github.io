@@ -86,6 +86,9 @@
   }
 }
 @media (max-width: 600px) {
+  .independant-img {
+    max-width: 120px !important;
+  }
   .container {
       width: 100%;
   }
