@@ -1,4 +1,4 @@
-# Portfolio Freelance & Blog [florianblanchet.github.io](https://florianblanchet.github.io)
+# Portfolio Freelance & Blog [florianblanchet.fr](http://florianblanchet.fr)
 
 Outils utilisés pour développé ce site :
 - [GitHub Pages](https://pages.github.com) - vous pouvez héberger n'importe quel site statique (HTML, CSS, JS) facilement et gratuitement sur Github
@@ -8,4 +8,4 @@ Outils utilisés pour développé ce site :
 - Et des améliorations perso
 
 ## Note
-- N'hésitez pas à me contacter pour des suggestions ou pour discuter de projets 🤙
+- N'hésitez pas à me contacter pour des suggestions ou pour discuter de projets : contact@florianblanchet.fr 🤙
