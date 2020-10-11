@@ -96,7 +96,7 @@
     display: none;
   }
   #intro.section {
-    background: url(../../assets/img/florian-blanchet-mobile.jpg) no-repeat top center/cover;
+    background: url(../../assets/img/accueil/florian-blanchet-mobile.jpg) no-repeat top center/cover;
     opacity: 0.7;
     background-position-x: 40%;
   }
