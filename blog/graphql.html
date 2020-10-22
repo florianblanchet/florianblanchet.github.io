@@ -28,7 +28,7 @@
     />
     <meta
       property="og:description"
-      content="Florian Blanchet | Data Engineer Freelance"
+      content="GraphQL: Une API qui ne parle pas pour rien dire par Florian Blanchet Data Engineer Freelance"
     />
     <meta property="og:url" content="florianblanchet.github.io" />
     <meta
@@ -196,7 +196,7 @@
       }
       @media (min-width: 30rem) {
         h1 {
-          font-size: 5rem;
+          font-size: 4rem;
         }
       }
       h2 {
@@ -273,6 +273,46 @@
           background-color: #008073;
       }
 
+      .logo {
+        max-width: 300px;
+      }
+
+      .img {
+          height: 400px;
+        }
+      @media (max-width: 800px) {
+        .img {
+          width: 100%;
+          height: 250px;
+        }
+      }
+      @media (max-width: 500px) {
+        .img {
+          width: 100%;
+          height: 100px;
+        }
+      }
+
+      figure {
+        margin-left: 0px;
+      }
+
+      pre {
+        width: 100%; 
+        border: 1px solid black; 
+        border-radius: 5px; 
+        padding: 10px; 
+        margin-left: 0px;
+        overflow: scroll;
+      }
+
+      pre code {
+        font-size: 1rem;
+        line-height: 1em;
+      }
+      
+
+
     </style>
   </head>
   <body>
@@ -286,11 +326,16 @@
         <dl>
           <dd>Publié:</span>
           <dt>
-            <time datetime="2020-07-19T00:00:00+00:00">
+            <time datetime="2020-09-24T00:00:00+00:00">
               24 Septembre 2020
             </time>
           </dt>
         </dl>
+        <img
+            alt=""
+            src="../assets/img/blog/graphql/graphql.png"
+            class="logo"
+          />
         <h2 id="tl-dr-">Pour les non développeurs </h2>
         <p>
           
@@ -342,24 +387,21 @@
           Les données sont définies et décrites par un<strong> schéma</strong>. Ce système est typé, avec une sémantique et une validation des données requêtées et renvoyées grâce au schéma. Il définit tous les champs, types et tout ce qui peut être demandé. De plus le schéma est implémenté dans le langage GraphQL ce qui le rend indépendant du langage utilisé coté serveur GraphQL.
           <figure>
           <pre>
-            <code>
-              type Query {   
-                human(id: ID!): Human 
-              }  
+<code>type Query {   
+  human(id: ID!): Human 
+}  
 
-              type Human {   
-                name: String   
-                appearsIn: [Episode]   
-                starships: [Starship] 
-              }  
+type Human {   
+  name: String   
+  appearsIn: [Episode]   
+  starships: [Starship] 
+}  
 
-              enum Episode {   NEWHOPE   EMPIRE   JEDI }  
+enum Episode {   NEWHOPE   EMPIRE   JEDI }  
 
-              type Starship {   
-                name: String 
-              }
-            </code>
-          </pre>
+type Starship {   
+  name: String 
+}</code></pre>
           <figcaption style="text-align: center;text-decoration: underline;">Exemple de schéma de données Star Wars</figcaption>
           </figure>
           Les types permis pour les champs sont larges :
@@ -386,17 +428,14 @@
           </ul>
           <figure>
             <pre>
-              <code>
-                Query: {   
-                  human(obj, args, context, info) {     
-                    return  context.db.loadHumanByID(args.id)
-                      .then(       
-                        userData => new Human(userData)     
-                      )   
-                  } 
-                }
-                </code>
-            </pre>
+<code>Query: {   
+  human(obj, args, context, info) {     
+    return  context.db.loadHumanByID(args.id)
+      .then(       
+        userData => new Human(userData)     
+      )   
+  } 
+}</code></pre>
             <figcaption style="text-align: center;text-decoration: underline;">Exemple de resolver</figcaption>
           </figure>
         </p>
@@ -407,45 +446,39 @@
           Par exemple la requête :
           <figure>
             <pre>
-              <code>
-                {
-                  human(id: 1002) {
-                    name
-                    appearsIn
-                    starships {
-                      name
-                    }
-                  }
-                }
-                </code>
-            </pre>
+<code>{
+  human(id: 1002) {
+    name
+    appearsIn
+    starships {
+      name
+    }
+  }
+}</code></pre>
           </figure>
           répond :
           <figure>
             <pre>
-              <code>
-                {
-                  "data": {
-                    "human": {
-                      "name": "Han Solo",
-                      "appearsIn": [
-                        "NEWHOPE",
-                        "EMPIRE",
-                        "JEDI"
-                      ],
-                      "starships": [
-                        {
-                          "name": "Millenium Falcon"
-                        },
-                        {
-                          "name": "Imperial shuttle"
-                        }
-                      ]
-                    }
-                  }
-                }
-                </code>
-            </pre>
+<code>{
+  "data": {
+    "human": {
+      "name": "Han Solo",
+      "appearsIn": [
+        "NEWHOPE",
+        "EMPIRE",
+        "JEDI"
+      ],
+      "starships": [
+        {
+          "name": "Millenium Falcon"
+        },
+        {
+          "name": "Imperial shuttle"
+        }
+      ]
+    }
+  }
+}</code></pre>
           </figure>
 
         </p>
@@ -455,8 +488,7 @@
           <img
             alt="Exemple d'API REST"
             src="https://raw.githubusercontent.com/graphql/graphiql/main/packages/graphiql/resources/graphiql.jpg"
-            class="activator"
-            style="height: 400px"
+            class="activator img"
           />
             <figcaption style="text-align: center;text-decoration: underline;">Outil <a href="https://github.com/graphql/graphiql" target="_blank" aria-label="Accéder au code de graphiQL">GraphiQL</a> permettant de tester l'API.</figcaption>
           </figure> 

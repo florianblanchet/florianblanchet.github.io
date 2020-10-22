@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Materialize - Compiled and minified CSS-->
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css"
+    />
+    <!-- Font Awesome Icon - CSS-->
+    <link 
+      rel="stylesheet" 
+      id="fontawesome-css" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css?ver=5.4.2" 
+      type="text/css" 
+      media="all"
+    >
+    
+    <title>Airflow : un vrai chef d’orchestre pour nos données</title>
+    <!-- Open Graph-->
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Airflow : un vrai chef d’orchestre pour nos données"
+    />
+    <meta
+      property="og:description"
+      content="Airflow : un vrai chef d’orchestre pour nos données par Florian Blanchet Data Engineer Freelance"
+    />
+    <meta property="og:url" content="florianblanchet.fr" />
+    <meta
+      property="og:site_name"
+      content="Florian Blanchet | Data Engineer Freelance"
+    />
+    <meta property="article:publisher" content="florianblanchet.fr" />
+    <meta property="og:image" content="" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@blanchet_flo" />
+    <meta
+      name="twitter:title"
+      content="Florian Blanchet | Data Engineer Freelance"
+    />
+    <meta
+      name="twitter:description"
+      content="Imaginons des projets de data science et IA qui font la différence"
+    />
+    <meta name="twitter:url" content="florianblanchet.fr" />
+    <meta name="author" content="Florian Blanchet" />
+    <meta
+      name="description"
+      content="Airflow : un vrai chef d’orchestre pour nos données par Florian Blanchet Data Engineer Freelance"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="/assets/img/favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="/assets/img/favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="/assets/img/favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="/assets/img/favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="/assets/img/favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/assets/img/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/assets/img/favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/assets/img/favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/img/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/assets/img/favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="/assets/img/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/img/favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="/assets/img/favicon/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <!--if lt IE 9script(src='//html5shim.googlecode.com/svn/trunk/html5.js')
+    -->
+    <meta name="robots" content="index, follow" />
+    <!-- Custom Styles-->
+    <style>
+      /* Blog Styles */
+      body {
+        color: #333;
+        font-size: 16px;
+      }
+      a {
+        color: #009688;
+      }
+      li {
+        margin-top: 15px;
+        margin-left: 15px;
+      }
+      blockquote {
+        border-left: 5px solid #795548;
+        color: #795548;
+        font-size: 125%;
+        font-weight: 400;
+        margin: 20px 0;
+        padding-left: 1.5rem;
+      }
+      blockquote * {
+        font-size: inherit;
+        line-height: inherit;
+      }
+      .text-center {
+        text-align: center;
+      }
+      nav {
+        background: white;
+        box-shadow: none;
+        height: 0;
+      }
+      nav i {
+        padding: 0 15px;
+        position: relative;
+        top: 5px;
+      }
+      main {
+        background: url(/assets/img/bg.png) repeat;
+      }
+      article {
+        max-width: 85ch;
+        margin: 0 auto;
+        padding: 2rem;
+        font-size: 100%;
+        line-height: 1.6;
+      }
+      @media (min-width: 30rem) {
+        article {
+          font-size: 120%;
+        }
+      }
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 300;
+        letter-spacing: 0.2rem;
+        line-height: 1;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+      }
+      @media (min-width: 30rem) {
+        h1 {
+          font-size: 3rem;
+        }
+      }
+      h2 {
+        font-size: 2.5rem;
+        line-height: 1.3;
+      }
+      h3 {
+        font-size: 2rem;
+        line-height: 1.3;
+      }
+      hr {
+        margin: 4rem 0;
+      }
+      ul {
+        padding-left: 1em;
+      }
+      ul li {
+        list-style-type: initial;
+      }
+      p a {
+        text-decoration: underline;
+      }
+      dl {
+        color: #666;
+        margin-bottom: 3rem;
+        margin-top: 0.5rem;
+      }
+      dd {
+        display: inline-block;
+        font-weight: 500;
+        margin-left: 0;
+      }
+      dt {
+        display: inline-block;
+        margin-left: 0.5rem;
+      }
+      .back-to-index {
+        align-content: center;
+        display: flex;
+        font-size: 1rem;
+        letter-spacing: 0.25rem;
+        padding: 2rem 3rem;
+        text-transform: uppercase;
+      }
+      .back-to-index i {
+        margin-right: 0.5rem;
+      }
+      dl {
+        margin-top: 0.5rem;
+      }
+      dd {
+        display: inline-block;
+        font-weight: 500;
+        margin-left: 0;
+      }
+      dt {
+        display: inline-block;
+        margin-left: 0.5rem;
+      }
+      .retourBtn {
+          position: fixed;
+          bottom: 20px;
+          right: 30px;
+          z-index: 99;
+          font-size: 18px;
+          border: none;
+          outline: none;
+          background-color: rgb(166,166,166,0.5);
+          color: white;
+          cursor: pointer;
+          border-radius: 4px;
+        }
+      .retourBtn:hover {
+          background-color: #008073;
+      }
+      .logo {
+        max-width: 300px;
+      }
+
+      .img {
+        max-width: 100%;
+        }
+      @media (max-width: 800px) {
+        .img {
+          width: 100%;
+          height: 250px;
+        }
+      }
+      @media (max-width: 500px) {
+        .img {
+          width: 100%;
+          height: 100px;
+        }
+      }
+
+      figure {
+        margin-left: 0px;
+      }
+
+      pre {
+        width: 100%; 
+        border: 1px solid black; 
+        border-radius: 5px; 
+        padding: 10px; 
+        margin-left: 0px;
+        overflow: scroll;
+      }
+
+      pre code {
+        font-size: 1rem;
+        line-height: 1em;
+      }
+
+    </style>
+  </head>
+  <body>
+    <a class="back-to-index" href="../#blog"  aria-label="Retour au blog"
+      ><i class="mdi-hardware-keyboard-arrow-left"></i>Retour au Blog</a
+    >
+    <!-- Main Content-->
+    <main>
+      <article>
+        <h1>Airflow : un chef d’orchestre pour nos transformations de données</h1>
+        <dl>
+          <dd>Publié:</span>
+          <dt>
+            <time datetime="2020-10-24T00:00:00+00:00">
+              24 Octobre 2020
+            </time>
+          </dt>
+        </dl>
+        <img
+            alt=""
+            src="../assets/img/blog/airflow/airflow.png"
+            class="logo"
+          />
+        <p>
+          <strong> Airflow</strong> a été initialement développé par Airbnb et rendu Open Source en 2014 avant d'être repris par la fondation Apache pour continuer son développement.<br>
+          Il totalise à<time datetime="2020-10-21T00:00:00+00:00"> date</time> 18.6k ⭐ sur son <a href="https://github.com/apache/airflow" target="_blank" aria-label="Github d'airflow">dépôt Github</a>.
+          <br> <br> 
+          Il permet de surveiller l’exécution de processus de traitement (ou workflows) en interface graphique et est codé et configurable entièrement en<strong> Python</strong>. C’est un<strong> orchestrateur de processus</strong>. Une fois le processus configuré en Python, Airflow gère son exécution et sont lancement. Cette technologie a pour philosophie : "configuration as code". <br><br> 
+        </p>
+        <hr />
+        <h2 id="1-pourquoi-airflow">
+          1. Pourquoi Airflow ? 
+        </h3>
+        <p>
+          Dans un contexte de Big data il faut pour l’entreprise un moyen de gérer ses processus de collecte et traitement de données afin de s’assurer que tout tourne correctement. Les données générées par nos entreprises sont diverses: que ce soit des données structurées, des excels, du contenu multimédia, des bases de données RH ou client etc… Grace aux services Cloud, comme Amazon Web Services (AWS) ou Microsoft Azure, on peut aujourd’hui stocker tout ce qu’on veut grâce à un vaste panel de services managés tels que Amazon S3, Redshift etc.. Ces formats différents ainsi que des cas d’usage métier variés qui obligent les données à se déplacer et changer de forme pour être utilisées par tous les services (dans des tableaux de bord, de la prediction ou des logiciels internes). <br>
+          
+          <br>
+
+          <blockquote>
+          <p><strong>Mais comment faire pour que tous nos processus de transformation de données tournent comme une horloge tout en ayant accés à une interface de gestion ? ... Welcome to Airflow !</strong></p>
+        </blockquote>
+
+          <br>
+          Airflow est devenu de facto l’outil privilégié pour effectuer ces taches de par sa communauté mais aussi sa robustesse et sa flexibilité. <br>
+
+          Il est là pour aider les Data Engineer à créer et configurer les processus de collecte/transformation/stockage de données (plus couramment appelé ETL pour « Extraction Transformation Load » ou Workflows). Airflow ressemble au système de <a href="https://fr.wikipedia.org/wiki/Cron" target="_blank" title="Définition de Cron job"> crons</a>, qui permet d'exécuter des scripts sur Unix, en y ajoutant des outils, une interface, une gestion des erreurs...<br>
+          <figure style="text-align: center;">
+            <img
+              alt=""
+              src="../assets/img/blog/airflow/dags.png"
+              class="img"
+            />
+            <figcaption style="text-align: center;text-decoration: underline;">Interface de gestion des processus. </figcaption>
+          </figure> 
+          Il existe des alternatives qui ont une communauté plus faible et qui sont moins utilisés tels que <a href="https://github.com/spotify/luigi" target="_blank" title="Githube de Luigi">Luigi</a> (13.8k ⭐ poussé par Spotify), <a href="https://oozie.apache.org/" target="_blank" title="Site Oozie">Oozie</a> (587 ⭐ soutenu par la fondation Apache) et<a href="https://azkaban.github.io/" target="_blank" title="Site azkaban"> Azkabhan</a> (3.4k ⭐).
+
+        </p>
+        <h2 id="2-comment-ca-marche">
+          2. Comment ça marche ?
+        </h2>
+        <p>
+          Airflow s'installe facilement en éxécutant la commande d'installation de librairie Python : <i>$pip install apache-airflow</i>. On initialise la base de données avec <i>$airflow initdb</i><br><br>
+          L'architecture d'Airflow repose sur plusieurs composants : 
+          <ul>
+            <li>Un <strong>orchestrateur de tâches</strong> (ou Task Scheduler) : c'est le coeur du réacteur, c'est lui qui priorise, lance, relance ou abandonne les tâches.</li>
+
+            <li>Un ou plusieurs <strong>éxécuteur(s) de tâches</strong> (ou Task Executor): il assure l'éxécution de chaque tâche demandée par l'orchestrateur.</li>
+
+           <li>Une <strong>interface web</strong> pour avoir une vision d'ensemble des processus en cours ou passés.</li>
+
+           <li>Une <strong>base de données</strong> pour stocker les états d'éxécution et les logs.</li>
+          </ul>
+          <br>
+          Chaque processus est configuré sous forme de<strong> DAG </strong>(pour Directed Acyclic Graph) qui regroupe un sous ensemble de <strong>tâches</strong> à effectuer dans un certain ordre. Ceci revient à créer un graph de tâches reliées entre elles. Ces processus DAG sont prévus à des <strong>heures précises</strong>  et leur exécution peut être <strong>surveillée</strong> en <strong>interface graphique</strong> au travers des fichiers de logs générés. <br>
+          <figure style="text-align: center;">
+            <img
+              alt=""
+              src="../assets/img/blog/airflow/context.png"
+              class="img"
+            />
+            <figcaption style="text-align: center;text-decoration: underline;">Action sur un DAG</figcaption>
+          </figure>
+          <br>
+
+          Tous ces DAGS sont codés et configurés en Python. Le fait que les pipelines soient codés en Python apporte une grande souplesse et un large choix d’exécutions possibles. 
+          <br><br>
+
+          L'orchestrateur va surveiller les DAGs et va déclencher les tâches lorsqu'il le faudra dans le bon ordre. Il va faire ceci en vérifiant périodiquement l'état des tâches en base de données (succés/échec de la tâche) et voir les connexions entre ces tâches selon le DAG. la configuration se fait dans le fichier <i>airflow.cfg</i> et l'orchestrateur est lancé avec la commande <i>$airflow scheduler</i> dans le terminal. 
+          <br>
+
+          <br>
+
+          Les éxécuteurs sont responsables de lancer les tâches demandées par l'orchestrateur. Ils gérent l'allocation des ressources. Par défaut Airflow utilise le SequentialExecutor mais celui ci est trés limité et c'est le seul qui fonctionne avec SQLite (la base de données par défaut). Il en existe d'autres comme DebugExecutor, LocalExecutor, DaskExecutor, CeleryExecutor ou KubernetesExecutor. Le CeleryExecutor est certainement une meilleure option que le SequentialExecutor car il peut exécuter plusieurs <i>workers</i> pour exécuter une action et en distribuant les ressources. 
+          <br>
+
+          <br>
+
+          Le serveur web permet d'avoir accés à une interface utilisateur pour surveiller l'exécution des DAGs et tâches et pour déboguer. On peut également lancer des tâches arbitrairement et avoir des statistiques sur les temps d'exécution. 
+          <figure style="text-align: center;">
+            <img
+              alt=""
+              src="../assets/img/blog/airflow/gantt.png"
+              class="img"
+            />
+            <figcaption style="text-align: center;text-decoration: underline;">Affichage des temps d'exécution des tâches en Gantt</figcaption>
+          </figure>
+
+          Nous voyons de façon graphique les dépendences entre les tâches sous forme d'arbre ou de graph. Le serveur web se lance avec la commande <i>$airflow webserver</i> 
+
+          <figure style="text-align: center;">
+            <img
+              alt=""
+              src="../assets/img/blog/airflow/graph.png"
+              class="img"
+            />
+            <figcaption style="text-align: center;text-decoration: underline;">Affichage d'un DAG sous forme de graph de tâches.</figcaption>
+          </figure> 
+
+          Cette interface permet également de gérer les connexions à des bases de données ou services et il est possible de la sécuriser avec une authentification. 
+        </p>
+
+        <h2 id="3-configuration">
+          3. Configuration d'un processus (ou DAG)
+        </h2>
+        <p>
+          Grâce au concept de DAG, Airflow nous permet d'organiser et d'optimiser l'exécution de nos sous tâches. 
+          Chaque tâche contient le code qui va être exécuté au traver d'<strong>opérateurs</strong>. Ces opérateurs permettent de faire quasi tout ce qu'on souhaite, que ce soit du code Python, des commandes Bash ou encore l'utilisation de Spark. Le travail de collecte, transformation et stockage est effectué au travers de ces opérateurs. Ce peut être une requête API, de l'agrégation de données de sources différentes, le téléchargement de fichiers distants pour les stocker sur notre infrastructure, des statistiques, de l'A/B testing, des routines quotidiennes (ou Batch) à faire sur les serveurs... Il existe des opérateurs pour s'interfacer avec tout type de base de données et de services managés chez les hébergeurs (ex: AwsBatchOperator).<br> La liste est disponible <a href="https://airflow.apache.org/docs/stable/concepts.html#operators" target="_blank" title="Accéder aux opérateurs">ici</a> ! Il est également possible de créer nos propres opérateurs (qui peuvent hériter d'existants) et les sauvegarder dans notre dossier './plugin'.
+          <br><br>
+          Il est possible de faire transiter des données ou des éléments de contexte entre deux tâches grâce aux fonctions <strong>x-com</strong>. Ceci rend plus facile la création de processus de traitement.
+          <br><br>
+          Il existe également des capteurs (ou Sensors) qui permettent de déclencher des actions selon un événement. Il peut être vu comme un opérateur particulier qui exécute une tâche longue d'écoute. Par exemple il y a le capteur <i>GoogleCloudStorageObjectSensor</i> qui attend l'existence d'un fichier dans le service de stockage "Google Cloud Storage" pour enclencher une suite de tâches. <br>La liste des capteurs <a href="https://airflow.apache.org/docs/stable/_api/airflow/contrib/sensors/index.html?highlight=sensors#module-airflow.contrib.sensors" target="_blank" title="Accéder aux capteurs">ici</a>.
+          <br><br>
+
+          Je vais vous montrer comment configurer un premier DAG maintenant. Il est composé de 2 tâches qui exécutent des commandes Shell Bash. On utilisera alors l'opérator <i>BashOperator</i>.  
+          On commence par importer airflow, l'opérateur et les packages nécessaires à notre traitement. Ensuite nous définissons notre DAG avec les arguments comme par exemple quand il va être lancé, son nom, les configurations de notification par mail si besoin et les tentatives. 
+         Viennent ensuite les tâches (t1 et t2) qui prennent un ID, les commandes à passer à l'opérateur et le DAG auquel elles sont rattachées. Ici t1 affiche la date et t2 attend 5sec.
+          <figure>
+            <pre>
+<code>from datetime import timedelta
+from airflow import DAG
+
+from airflow.operators.bash_operator import BashOperator
+from airflow.utils.dates import days_ago
+
+default_args = {
+    'owner': 'airflow',
+    'depends_on_past': False,
+    'start_date': days_ago(2),
+    'email': ['airflow@example.com'],
+    'email_on_failure': False,
+    'email_on_retry': False,
+    'retries': 1,
+    'retry_delay': timedelta(minutes=5)
+}
+dag = DAG(
+    'test',
+    default_args=default_args,
+    description='Test de DAG',
+    schedule_interval=timedelta(days=1),
+)
+
+t1 = BashOperator(
+    task_id='print_date',
+    bash_command='date',
+    dag=dag,
+)
+t1.doc_md = """\
+#### Documentation
+On peut décrire ici notre DAG
+"""
+
+t2 = BashOperator(
+    task_id='sleep',
+    depends_on_past=False,
+    bash_command='sleep 5',
+    retries=3,
+    dag=dag,
+)
+dag.doc_md = __doc__
+
+t1 >> t2</code></pre>
+            <figcaption style="text-align: center;text-decoration: underline;">Exemple de DAG. <a href="http://airflow.apache.org" target="_blank" title="accéder au site airflow">source</a></figcaption>
+          </figure>
+
+          Le fichier est à sauvegarder dans le dossier './dags' absolument si on laisse la valeur par défaut du chemin dans le dossier de configuration <i>airflow.cfg</i>. 
+          On peut lancer le DAG avec <i>$python ~/airflow/dags/tutorial.py</i> ou tester une tâche spécifique du DAG avec <i>$airflow test tutorial sleep 2020-10-25</i> .
+        </p>
+        
+        <hr />
+
+        <p>
+          <strong>Conclusion :</strong> <br>Airflow est trés pratique pour automatiser tous les processus possibles. Le large choix d'opérateurs permet de laisser libre cours à son imagination et de faciliter la gestion de son architecture de données. Il reste néanmoins lourd à déployer et configurer correctement même si le gain de temps une fois lancé en vaut le coup. Son interface grahique dans laquelle on a toutes les informations (logs, graphiques de temps, code...) est trés agrèable. Un bémol est le manque d'une plus grande communauté (même si c'est le plus connu pour faire ce type de fonctions) notamment sur StackOverflow, ce qui rend parfois la résolution d'erreurs compliquée. 
+        </p>
+        <br><br>
+        
+
+        <p style="text-align: center;">
+          Merci de votre lecture et n'hésitez pas à <a href="../#contact" aria-label="Accéder à la section Contact"> m'envoyer </a>vos commentaires si vous avez eu une expérience avec Airflow ou si vous voulez en savoir plus !
+        <br><br>
+        <strong>Florian</strong>
+        </p>
+         <a class="back-to-index" href="../#blog" aria-label="Retour au blog"
+            ><i class="mdi-hardware-keyboard-arrow-left"></i>Retour au Blog</a
+          >
+
+        <h3 id="4-documentation">
+          Sources & pour aller plus loin :
+        </h3>
+        <p>
+          <ul>
+            <li><a href="https://airflow.apache.org" title="Site officiel" target="_blank">Site officiel</a></li>
+            <li><a href="http://airflow.apache.org/docs/stable/ui.html" title="interface ui" target="_blank">Interface UI d'airflow</a></li>
+            <li><a href="https://github.com/apache/airflow" title="code source" target="_blank">Code source</a></li>
+            <li><a href="https://github.com/astronomer/airflow-guides/tree/main/guides" title="documentation" target="_blank">Documentation</a></li>
+          </ul>
+        </p>
+
+       
+      </article>
+      <button onclick="topFunction()" class="btn btn-outline-primary retourBtn" title="Remonter haut de page"><i class="fa fa-level-up" aria-hidden="true"></i></button>
+    </main>
+    
+
+    <script>
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+
+        initGoogleAnalytics('163912368-2')
+        // Set Up Google Analytics
+        function initGoogleAnalytics(analyticsId) {
+            // Inject the Google Analytics Tag Manager script into the DOM
+            analyticsUrl =
+              "https://www.googletagmanager.com/gtag/js?id=UA-163912368-2"
+            var ref = document.getElementsByTagName("script")[0]
+            var script = document.createElement("script")
+            script.src = analyticsUrl
+            ref.parentNode.insertBefore(script, ref)
+
+            // Initialize Google Analytics
+            window.dataLayer = window.dataLayer || []
+            function gtag() {
+              dataLayer.push(arguments)
+            }
+            gtag("js", new Date())
+            gtag("config", "UA-163912368-2")
+          }
+      </script>
+  </body>
+</html>
